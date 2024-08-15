@@ -1,5 +1,7 @@
 import React, {useRef, useEffect} from 'react'
 import './Header.css'
+import { ReactComponent as Logito } from './images/logosvg.svg';
+
 function Header({timeline, ease}) {
     let logo = useRef(null);
     let menu_item1 = useRef(null);
@@ -8,7 +10,7 @@ function Header({timeline, ease}) {
     useEffect(() => {
         timeline.from(logo, 1, {
             opacity: 0,
-            y: '100'
+            y: '10'
         });
         timeline.from([menu_item1, menu_item2, menu_item3], 2 ,{
             opacity: 0,
@@ -23,8 +25,9 @@ function Header({timeline, ease}) {
         <div>
             <div className="header">
                 <div className="logo" ref = {el => logo = el}>
-                    Lumiere
+                    <Logito className="custom-logo"/>
                 </div>
+                
                 <div className="menu">
                 <div className="menu-item" ref = {el => menu_item1 = el}>Acerca de</div>
                 <div className="menu-item" ref = {el => menu_item2 = el}>Iniciar sesión</div>
