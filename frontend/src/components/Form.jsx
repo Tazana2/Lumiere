@@ -12,7 +12,11 @@ function Form({route, method}) {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
 
-    const title = method === "login" ? "Login" : "Register"
+    const className = method === "login" ? "form-container sign-in" : "form-container sign-up"
+    const ass = method === "login" ? true : false
+    const title = method === "login" ? "Sign In" : "Create Account"
+    const spanText = method === "login" ? "or use your email password" : "or use your email for registeration"
+    const btnText = method === "login" ? "Sign In" : "Sign Up"
 
     const handleSubmit = async (e) => {
         setLoading(true)
@@ -27,44 +31,85 @@ function Form({route, method}) {
                 const response = await api.post(route, { username, email, password })
                 localStorage.setItem(ACCESS_TOKEN, response.data.access)
                 localStorage.setItem(REFRESH_TOKEN, response.data.refresh)
-                navigate("/login-register")
+                navigate("/")
             }
         } catch (error) {
-            alert(error)
+            alert(error + " Please try again")
         } finally {
             setLoading(false)
         }
     }
 
-    return <form onSubmit={handleSubmit} className="form-container">
-        <h1>{ title }</h1>
-        <input 
-            className="form-input" 
-            type="text" 
-            value={username} 
-            onChange={(e) => setUserName(e.target.value)}
-            placeholder="Username" 
-        />
-        { method === "register" && 
-        <input 
-            className="form-input" 
-            type="email" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
-        /> }
-        <input 
-            className="form-input" 
-            type="password" 
-            value={password} 
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password" 
-        />
-        { loading &&  <LoadingIndicator /> }
-        <button className="form-button" type="submit">
-            { title }
-        </button>
-    </form>
+    return (
+        <form onSubmit={handleSubmit} className={className}>
+            {
+                ass && 
+                <div>
+                    <h1>{ title }</h1>
+                    <span>{ spanText }</span>
+                    <input 
+                        className="form-input" 
+                        type="text" 
+                        value={username} 
+                        onChange={(e) => setUserName(e.target.value)}
+                        placeholder="Username" 
+                    />
+                    { method === "register" && 
+                    <input 
+                        className="form-input" 
+                        type="email" 
+                        value={email} 
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Email"
+                    /> }
+                    <input 
+                        className="form-input" 
+                        type="password" 
+                        value={password} 
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password" 
+                    />
+                    { loading &&  <LoadingIndicator /> }
+                    <button className="form-button" type="submit">
+                        { btnText }
+                    </button>
+                </div>
+            }
+            {
+                !ass &&
+                <div>
+                    <h1>{ title }</h1>
+                    <span>{ spanText }</span>
+                    <input 
+                        className="form-input" 
+                        type="text" 
+                        value={username} 
+                        onChange={(e) => setUserName(e.target.value)}
+                        placeholder="Username" 
+                    />
+                    { method === "register" && 
+                    <input 
+                        className="form-input" 
+                        type="email" 
+                        value={email} 
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Email"
+                    /> }
+                    <input 
+                        className="form-input" 
+                        type="password" 
+                        value={password} 
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password" 
+                    />
+                    { loading &&  <LoadingIndicator /> }
+                    <button className="form-button" type="submit">
+                        { btnText }
+                    </button>
+                </div>
+            }
+        </form>
+    )
 }
 
 export default Form
