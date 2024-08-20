@@ -1,12 +1,11 @@
-import { Navigate } from "react-router-dom"
 import { jwtDecode } from "jwt-decode"
 import api from "../api"
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants"
 import { useState, useEffect } from "react"
-import LoadingIndicator from "./LoadingIndicator"
+import { Link } from "react-router-dom"
 
-function ProtectedRoute({ children }) {
-    const [isAuthorized, setIsAuthorized] = useState(null)
+function NavBar() {
+    const [isAuthorized, setIsAuthorized] = useState(false)
 
     useEffect(() => {
         auth().catch((error) => {
@@ -51,14 +50,28 @@ function ProtectedRoute({ children }) {
         }
     }
 
-    if (isAuthorized === null) {
-        return <LoadingIndicator />
-    }
-
-    if (!isAuthorized) {
-        return <Navigate to="/welcome" />
-    }
-    return children
+    return (
+        <nav>
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                {
+                    !isAuthorized && (
+                        <>
+                            <li><Link to="/login-register">Login or Register</Link></li>
+                        </>
+                    )
+                }
+                {
+                    isAuthorized && (
+                        <>
+                            <li><Link to="/forum">Forum</Link></li>
+                            <li><Link to="/logout">Logout</Link></li>
+                        </>
+                    )
+                }
+            </ul>
+        </nav>
+    )
 }
 
-export default ProtectedRoute
+export default NavBar

@@ -5,7 +5,6 @@ from .serializers import UserSerializer, PostSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from .models import Post
 
-
 class PostListCreate(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
@@ -17,7 +16,6 @@ class PostListCreate(generics.ListCreateAPIView):
         else:
             print(serializer.errors)
 
-
 class PostDelete(generics.DestroyAPIView):
     serializer_class = PostSerializer
     permission_classes = [IsAuthenticated]
@@ -26,7 +24,6 @@ class PostDelete(generics.DestroyAPIView):
     def get_queryset(self):
         user = self.request.user
         return Post.objects.filter(author=user)
-
 
 class CreateUserView(generics.CreateAPIView):
     queryset = User.objects.all()

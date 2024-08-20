@@ -17,20 +17,17 @@ function Form({route, method}) {
     const handleSubmit = async (e) => {
         setLoading(true)
         e.preventDefault()
-
         try {
             if (method === "login") {
                 const response = await api.post(route, { username, password })
-
                 localStorage.setItem(ACCESS_TOKEN, response.data.access)
                 localStorage.setItem(REFRESH_TOKEN, response.data.refresh)
                 navigate("/")
             } else {
                 const response = await api.post(route, { username, email, password })
-
                 localStorage.setItem(ACCESS_TOKEN, response.data.access)
                 localStorage.setItem(REFRESH_TOKEN, response.data.refresh)
-                navigate("/login")
+                navigate("/login-register")
             }
         } catch (error) {
             alert(error)
