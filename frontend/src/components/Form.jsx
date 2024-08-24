@@ -34,9 +34,21 @@ function Form({route, method}) {
                 navigate("/")
             }
         } catch (error) {
-            alert(error + " Please try again")
+            let message = ""
+            try {
+                const errors = JSON.parse(error.response.request.response)
+                for (let key in errors) {
+                    message += `${key}: ${errors[key]}\n`
+                }
+            } catch{
+                message = "Network Error"
+            }
+            alert(message)
         } finally {
             setLoading(false)
+            setUserName("")
+            setPassword("")
+            setEmail("")
         }
     }
 

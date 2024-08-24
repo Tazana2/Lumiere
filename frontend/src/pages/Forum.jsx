@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react"
 import api from "../api"
-import Post from "../components/Post"
+import { Post } from "../components"
 import "../styles/Forum.css"
-import NavBar from "../components/NavBar"
 
 function Forum() {
     const [posts, setPosts] = useState([])
@@ -47,7 +46,6 @@ function Forum() {
     }
 
     return <div>
-        <NavBar />
         <h2>Forum</h2>
         { posts.map((post) => 
             <Post post={post} onDelete={deletePost} key={post.id}/>
