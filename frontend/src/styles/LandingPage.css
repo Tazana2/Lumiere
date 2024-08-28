@@ -1,0 +1,292 @@
+.emptysec {
+    height: 90px;
+}
+
+.header-container {
+position: relative;
+isolation: isolate;
+overflow: hidden;
+}
+
+.header-container h2 {
+max-width: fit-content;
+margin-inline: auto;
+margin-bottom: 1rem;
+padding: 0.5rem 1rem;
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 0.9rem;
+font-weight: 600;
+color: #fa6021;
+background-color: #fff8f5;
+border-radius: 5rem;
+}
+
+.header-container h2 img {
+max-width: 25px;
+}
+.header-container h1 {
+margin-bottom: 1rem;
+font-size: 4rem;
+font-weight: 700;
+color: var(--text-dark);
+text-align: center;
+line-height: 5.5rem;
+}
+
+.header-container h1 span {
+color: var(--primary-color);
+}
+
+.header-container p {
+margin-bottom: 2rem;
+max-width: 600px;
+margin-inline: auto;
+color: var(--text-light);
+line-height: 2rem;
+text-align: center;
+}
+
+.header-btns {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 2rem;
+}
+
+.header-btns a {
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 1rem;
+font-weight: 500;
+color: var(--text-dark);
+}
+
+.header-btns a span {
+padding: 5px 11px;
+font-size: 1.5rem;
+color: var(--white);
+background-color: var(--primary-color);
+border-radius: 100%;
+transition: 0.3s;
+}
+
+.header-btns a:hover span {
+box-shadow: 2px 2px 10px rgba(106, 56, 194, 0.5);
+}
+
+.header-img {
+position: relative;
+margin-top: 25px;
+width: 280px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.steps {
+background-image: url("/src/assets/steps-bg.png");
+background-position: center center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.steps-grid {
+margin-top: 4rem;
+display: grid;
+gap: 1rem;
+}
+
+.steps-card {
+padding: 1rem;
+background-color: var(--white);
+border-radius: 5px;
+box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.steps-card span {
+display: inline-block;
+margin-bottom: 1rem;
+padding: 5px 11px;
+font-size: 1.5rem;
+border-radius: 100%;
+}
+
+.steps-card:nth-child(1) span {
+color: #fa4e09;
+background-color: #fff9f6;
+}
+
+.steps-card:nth-child(2) span {
+color: #6a38c2;
+background-color: #e9ddff;
+}
+
+.steps-card:nth-child(3) span {
+color: #3ac2ba;
+background-color: #f0fffe;
+}
+
+.steps-card:nth-child(4) span {
+color: #fbbc09;
+background-color: #fff8e3;
+}
+
+.steps-card h4 {
+margin-bottom: 0.5rem;
+font-size: 1.2rem;
+font-weight: 700;
+color: var(--text-dark);
+}
+
+.steps-card p {
+color: var(--text-light);
+}
+
+.explore-grid {
+margin-block: 4rem;
+display: grid;
+gap: 1rem;
+}
+
+.explore-card {
+padding: 1rem;
+border-radius: 5px;
+box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+transition: 0.3s;
+}
+
+.explore-card:hover {
+background-color: var(--primary-color);
+}
+
+.explore-card span {
+display: inline-block;
+margin-bottom: 1rem;
+padding: 5px 11px;
+font-size: 1.5rem;
+border-radius: 5px;
+transition: 0.3s;
+}
+
+.explore-card:nth-child(1) span {
+color: #f04a0c;
+background-color: #f6efef;
+}
+
+.explore-card:nth-child(2) span {
+color: #6a38c2;
+background-color: #e9ddff;
+}
+
+.explore-card:nth-child(3) span {
+color: #ff0101;
+background-color: #fff2f2;
+}
+
+.explore-card:nth-child(4) span {
+color: #fbbc09;
+background-color: #fff8e3;
+}
+
+.explore-card:nth-child(5) span {
+color: #4680e7;
+background-color: #e7edf8;
+}
+
+.explore-card:nth-child(6) span {
+color: #34a753;
+background-color: #f1fef5;
+}
+
+.explore-card:nth-child(7) span {
+color: #443ee0;
+background-color: #f6f5ff;
+}
+
+.explore-card:nth-child(8) span {
+color: #3ac2ba;
+background-color: #f0fffe;
+}
+
+.explore-card:hover span {
+color: var(--white);
+background-color: #794cc7;
+}
+
+.explore-card h4 {
+margin-bottom: 0.5rem;
+font-size: 1.2rem;
+font-weight: 700;
+color: var(--text-dark);
+transition: 0.3s;
+}
+
+.explore-card p {
+color: var(--text-light);
+transition: 0.3s;
+}
+
+.explore-card:hover h4 {
+color: var(--white);
+}
+
+.explore-card:hover p {
+color: var(--extra-light);
+}
+
+.explore-btn {
+text-align: center;
+}
+
+.swiper {
+padding-top: 4rem;
+width: 100%;
+max-width: 600px;
+}
+
+.footer-container {
+display: grid;
+gap: 4rem 2rem;
+}
+
+.footer-logo {
+margin-bottom: 2rem;
+}
+
+.footer-col p {
+max-width: 400px;
+color: var(--text-light);
+}
+
+.footer-col h4 {
+margin-bottom: 2rem;
+font-size: 1.2rem;
+font-weight: 600;
+color: var(--text-dark);
+}
+
+.footer-links {
+display: grid;
+gap: 1rem;
+}
+
+.footer-links a {
+color: var(--text-light);
+}
+
+.footer-links a:hover {
+color: var(--primary-color);
+}
+
+.footer-links a span {
+font-size: 1.25rem;
+}
+
+.footer-bar {
+padding: 1rem;
+font-size: 0.9rem;
+color: var(--text-light);
+text-align: center;
+}

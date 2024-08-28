@@ -1,71 +1,61 @@
-import { jwtDecode } from "jwt-decode"
-import api from "../api"
-import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants"
-import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { useContext } from "react"
+import { AuthContext } from "../contexts/AuthContext"
+import { Link, useNavigate } from "react-router-dom"
+import "../styles/NavBar.css"
+
 
 function NavBar() {
-    const [isAuthorized, setIsAuthorized] = useState(false)
+    const { isAuthorized } = useContext(AuthContext)
+    const navigate = useNavigate()
 
-    useEffect(() => {
-        auth().catch((error) => {
-            console.error(error)
-            setIsAuthorized(false)
-        })
-    }, [])
+    const toggleNav = () => {
+        document.querySelector(".nav-links").classList.toggle("open")
 
-    const refreshToken = async () => {
-        const refreshToken = localStorage.getItem(REFRESH_TOKEN)
-        try {
-            const response = await api.post("/api/token/refresh/", {
-                refresh: refreshToken
-            })
-            if (response.status === 200) {
-                localStorage.setItem(ACCESS_TOKEN, response.data.access)
-                setIsAuthorized(true)
-            } else {
-                setIsAuthorized(false)
-            }
-        } catch (error) {
-            console.error(error)
-            setIsAuthorized(false)
-        }
-    }
-
-    const auth = async () => {
-        const token = localStorage.getItem(ACCESS_TOKEN)
-        if (!token) {
-            setIsAuthorized(false)
-            return
-        }
-
-        const decoded = jwtDecode(token)
-        const tokenExpiration = decoded.exp
-        const currentTime = Date.now() / 1000
-
-        if (tokenExpiration < currentTime) {
-            await refreshToken()
-        } else {
-            setIsAuthorized(true)
-        }
+        const isOpen = document.querySelector(".nav-links").classList.contains("open")
+        document.querySelector(".nav-menu-btn i").setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line")
     }
 
     return (
         <nav>
-            <ul>
-                <li><Link to="/">Home</Link></li>
+            <div className="nav-header">
+                <div className="nav-logo">
+                    <img src="/src/assets/lumiere.svg" alt="logo" className="logo-icon" onClick={
+                        () => {
+                            navigate("/")
+                        }
+                    }/>
+                </div>
+                <div className="nav-menu-btn" onClick={ toggleNav }>
+                    <i className="ri-menu-line"></i>
+                </div>
+            </div>
+            <ul className="nav-links" onClick={ toggleNav }>
+                <li><Link to="/">Inicio</Link></li>
+                <li><Link to="#">Sobre nosotros</Link></li>
                 {
                     !isAuthorized && (
                         <>
-                            <li><Link to="/login-register">Login or Register</Link></li>
+                            <li>
+                                <button onClick={ 
+                                    () => {
+                                        navigate("/login-register")
+                                    }
+                                } className="btn">Ingresa o reg&iacute;strate</button>
+                            </li>
                         </>
                     )
                 }
                 {
                     isAuthorized && (
                         <>
-                            <li><Link to="/forum">Forum</Link></li>
-                            <li><Link to="/logout">Logout</Link></li>
+                            <li><Link to="/forum">Foro</Link></li>
+                            <li>
+                                <button onClick={ 
+                                    () => {
+                                        navigate("/logout")
+                                    }
+                                } className="btn">Salir</button>
+                            </li>
                         </>
                     )
                 }
