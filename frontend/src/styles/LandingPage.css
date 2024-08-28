@@ -86,7 +86,7 @@ transform: translateX(-50%);
 }
 
 .steps {
-background-image: url("/steps-bg.png");
+background-image: url("/src/assets/steps-bg.png");
 background-position: center center;
 background-size: cover;
 background-repeat: no-repeat;

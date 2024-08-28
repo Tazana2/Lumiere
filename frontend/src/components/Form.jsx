@@ -3,9 +3,12 @@ import { useNavigate } from "react-router-dom"
 import api from "../api"
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants"
 import LoadingIndicator from "./LoadingIndicator"
+import { useContext } from "react"
+import { AuthContext } from "../contexts/AuthContext"
 import "../styles/Form.css"
 
 function Form({route, method}) {
+    const { setIsAuthorized } = useContext(AuthContext)
     const [username, setUserName] = useState("")
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
@@ -26,6 +29,7 @@ function Form({route, method}) {
                 const response = await api.post(route, { username, password })
                 localStorage.setItem(ACCESS_TOKEN, response.data.access)
                 localStorage.setItem(REFRESH_TOKEN, response.data.refresh)
+                setIsAuthorized(true)
                 navigate("/")
             } else {
                 const response = await api.post(route, { username, email, password })

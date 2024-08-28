@@ -16,8 +16,7 @@ function Forum() {
         api.get("/api/posts/")
             .then((res) => res.data)
             .then((data) => {
-                setPosts(data); 
-                console.log(data)
+                setPosts(data)
             })
             .catch((err) => console.log(err))
     }
@@ -45,36 +44,41 @@ function Forum() {
         .catch((err) => alert(err))
     }
 
-    return <div>
-        <h2>Forum</h2>
-        { posts.map((post) => 
-            <Post post={post} onDelete={deletePost} key={post.id}/>
-        )}
-        <h3>Create a Post</h3>
-        <form onSubmit={createPost}>
-            <label htmlFor="title">Title:</label>
-            <br />
-            <input
-                type="text"
-                name="title" 
-                id="title" 
-                required 
-                onChange={(e) => setTitle(e.target.value)}
-                value={title}
-            />
-            <label htmlFor="content">Content:</label>
-            <br />
-            <textarea 
-                name="content" 
-                id="content"
-                required
-                value={content}
-                onChange={(e) => setContent(e.target.value)}
-            ></textarea>
-            <br />
-            <input type="submit" value="submit" />
-        </form>
-    </div>
+    return (
+        <>
+            <div className="body">
+                <h2>Foro</h2>
+                <h3>Crea un Post!</h3>
+                <form onSubmit={createPost}>
+                    <label htmlFor="title">T&iacute;tulo:</label>
+                    <br />
+                    <input
+                        type="text"
+                        name="title" 
+                        id="title" 
+                        required 
+                        onChange={(e) => setTitle(e.target.value)}
+                        value={title}
+                    />
+                    <br />
+                    <label htmlFor="content">Contenido:</label>
+                    <br />
+                    <textarea 
+                        name="content" 
+                        id="content"
+                        required
+                        value={content}
+                        onChange={(e) => setContent(e.target.value)}
+                    ></textarea>
+                    <br />
+                    <input type="submit" value="submit" className="btn" />
+                </form>
+                { posts.map((post) => 
+                    <Post post={post} onDelete={deletePost} key={post.id}/>
+                )}
+            </div>
+        </>
+    )
 }
 
 export default Forum

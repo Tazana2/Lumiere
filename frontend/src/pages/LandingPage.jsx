@@ -1,18 +1,49 @@
 import { Link, useNavigate } from "react-router-dom"
 import "../styles/LandingPage.css"
+import { useEffect } from "react"
 
 function LandingPage() {
     const navigate = useNavigate()
-
-    const goToLoginRegister = () => {
-        return navigate("/login-register")
-    }
+    useEffect(() => {
+        const scrollRevealOption = {
+            distance: "50px",
+            origin: "bottom",
+            duration: 1000
+        }
+        ScrollReveal().reveal(".header-container h2", {
+            ...scrollRevealOption,
+        })
+        ScrollReveal().reveal(".header-container h1", {
+            ...scrollRevealOption,
+            delay: 500,
+        })
+        ScrollReveal().reveal(".header-container p", {
+            ...scrollRevealOption,
+            delay: 1000,
+        })
+        ScrollReveal().reveal(".header-btns", {
+            ...scrollRevealOption,
+            delay: 1500,
+        })
+        ScrollReveal().reveal(".header-img", {
+            ...scrollRevealOption,
+            delay: 1000,
+        })
+        ScrollReveal().reveal(".steps-card", {
+            ...scrollRevealOption,
+            interval: 500,
+        })
+        ScrollReveal().reveal(".explore-card", {
+            duration: 1000,
+            interval: 500,
+        })
+    }, [])
 
     return (
         <>
             <header className="header-container section-container">
                 <section className="emptysec"></section>
-                <h2><img src="/ai.png" alt="bag" />AI Powered</h2>
+                <h2><img src="/src/assets/ai.png" alt="bag" />AI Powered</h2>
                 <h1>La mejor manera <br /> de aprender <span>LSC</span></h1>
                 <p>
                 Lumiere es una plataforma gratuita y libre para el aprendizaje de LCS
@@ -20,14 +51,18 @@ function LandingPage() {
                 para hacer del proceso algo divertido. 
                 </p>
                 <div className="header-btns">
-                    <button className="btn" onClick={ goToLoginRegister }>Empieza a aprender</button>
+                    <button className="btn" onClick={
+                        () => {
+                            navigate("/login-register")
+                        }
+                    }>Empieza a aprender</button>
                     <Link to="/">
                         <span><i className="ri-play-fill"></i></span>
                         Cómo funciona?
                     </Link>
                 </div>
 
-                <img src="/sketch.png" alt="header-img" className="header-img" />
+                <img src="/src/assets/sketch.png" alt="header-img" className="header-img" />
             </header>
 
             <section className="steps">
@@ -107,7 +142,11 @@ function LandingPage() {
                     </div>
                 </div>
                 <div className="explore-btn">
-                    <button className="btn" onClick={ goToLoginRegister }>Regístrate</button>
+                    <button className="btn" onClick={
+                        () => {
+                            navigate("/login-register")
+                        }
+                    }>Regístrate</button>
                 </div>
             </section>
 
@@ -115,7 +154,7 @@ function LandingPage() {
                 <div className="section-container footer-container">
                     <div className="footer-col">
                         <div className="footer-logo">
-                            <img src="/lumiere.svg" alt="Icono" className="logo-icon" />
+                            <img src="/src/assets/lumiere.svg" alt="Icono" className="logo-icon" />
                         </div>
                         <p>
                         Nuestra plataforma está pensada para ser gratuita, OpenSource y accesible para cualquiera.
