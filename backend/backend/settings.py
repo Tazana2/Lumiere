@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "api",
     "api_education",
+    "api_posts",
 ]
 
 MIDDLEWARE = [

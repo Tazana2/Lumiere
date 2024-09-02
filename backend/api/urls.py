@@ -6,7 +6,4 @@ urlpatterns = [
     path("token/", TokenObtainPairView.as_view(), name="get_token"),
     path("token/refresh/", TokenRefreshView.as_view(), name="refresh_token"),
     path("user/register/", views.CreateUserView.as_view(), name="register"),
-    # TODO:  Create a new api for the posts endpoint
-    path("posts/", views.PostListCreate.as_view(), name="post_list"),
-    path("posts/delete/<int:pk>/", views.PostDelete.as_view(), name="post_delete"),
 ]
