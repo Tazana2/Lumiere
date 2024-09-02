@@ -18,9 +18,3 @@ class PostSerializer(serializers.ModelSerializer):
         model = Post
         fields = ["id", "title", "content", "date_posted", "author"]
         extra_kwargs = {"author": {"read_only": True}}
-
-# This could be a serializer for a lesson
-# class LessonSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Lesson
-#         fields = ["id", "title", "description", "is_completed"]
