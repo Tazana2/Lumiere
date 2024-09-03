@@ -14,21 +14,21 @@ class LessonList(generics.ListAPIView):
     permission_classes = [AllowAny]
 
 class FindPairLessonList(generics.ListAPIView):
-    queryset = models.FindPairLesson.objects.all()
+    queryset = models.FindPairExercises.objects.all()
     serializer_class = serializers.FindPairLessonSerializer
     permission_classes = [AllowAny]
 
 class FreeTextLessonList(generics.ListAPIView):
-    queryset = models.FreeTextLesson.objects.all()
+    queryset = models.FreeTextExercises.objects.all()
     serializer_class = serializers.FreeTextLessonSerializer
     permission_classes = [AllowAny]
 
 class SignLanguageLessonList(generics.ListAPIView):
-    queryset = models.SignLanguageLesson.objects.all()
+    queryset = models.SignLanguageExercises.objects.all()
     serializer_class = serializers.SignLanguageLessonSerializer
     permission_classes = [AllowAny]
 
 class EducationalStoryLessonList(generics.ListAPIView):
-    queryset = models.EducationalStoryLesson.objects.all()
+    queryset = models.EducationalStoryExercises.objects.all()
     serializer_class = serializers.EducationalStoryLesson
     permission_classes = [AllowAny]

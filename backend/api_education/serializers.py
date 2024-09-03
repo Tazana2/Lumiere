@@ -13,20 +13,20 @@ class LessonSerializer(serializers.ModelSerializer):
 
 class FindPairLessonSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.FindPairLesson
+        model = models.FindPairExercises
         fields = ["id", "lesson", "title", "description", "image1", "image2", "text1", "text2"]
 
 class FreeTextLessonSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.FreeTextLesson
+        model = models.FreeTextExercises
         fields = ["id", "lesson", "title", "description", "prompt"]
 
 class SignLanguageLessonSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.SignLanguageLesson
+        model = models.SignLanguageExercises
         fields = ["id", "lesson", "title", "description", "video"]
 
 class EducationalStoryLesson(serializers.ModelSerializer):
     class Meta:
-        model = models.EducationalStoryLesson
+        model = models.EducationalStoryExercises
         fields = ["id", "lesson", "title", "description", "content"]

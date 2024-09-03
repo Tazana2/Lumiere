@@ -17,8 +17,8 @@ class Lesson(models.Model):
         return f"{self.title} - {self.module.title}"
 
 
-class FindPairLesson(models.Model):
-    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='find_pair_lessons')
+class FindPairExercises(models.Model):
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='find_pair_exercises')
     title = models.CharField(max_length=255)
     description = models.TextField()
     text1 = models.CharField(max_length=255)
@@ -30,8 +30,8 @@ class FindPairLesson(models.Model):
         return self.title
 
 
-class FreeTextLesson(models.Model):
-    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='free_text_lessons')
+class FreeTextExercises(models.Model):
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='free_text_exercises')
     title = models.CharField(max_length=255)
     description = models.TextField()
     prompt = models.TextField()
@@ -40,8 +40,8 @@ class FreeTextLesson(models.Model):
         return self.title
 
 
-class SignLanguageLesson(models.Model):
-    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='sign_language_lessons')
+class SignLanguageExercises(models.Model):
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='sign_language_exercises')
     title = models.CharField(max_length=255)
     description = models.TextField()
     video = models.FileField(upload_to='sign_language_videos/')
@@ -50,8 +50,8 @@ class SignLanguageLesson(models.Model):
         return self.title
 
 
-class EducationalStoryLesson(models.Model):
-    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='educational_story_lessons')
+class EducationalStoryExercises(models.Model):
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='educational_story_exercises')
     title = models.CharField(max_length=255)
     description = models.TextField()
     content = models.TextField()
