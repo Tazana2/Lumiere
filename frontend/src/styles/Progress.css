@@ -1,0 +1,129 @@
+.progress-container {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 130px 10px 10px; 
+}
+
+.progress-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.progress-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.progress-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  width: 20%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.progress-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.topics-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topic {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.topic:hover {
+  background-color: #c8e6c9;
+}
+
+
+
+.topic-completed {
+  background-color: #e8f5e9;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.topic-completed:hover {
+  background-color: #c8e6c9;
+}
+
+.completed-tag {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 20px;
+  padding: 2px 8px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.up-next-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.up-next-item {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.up-next-item:hover {
+  background-color: #c8e6c9;
+}
+
+
+.up-next-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.up-next-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.locked-text {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}

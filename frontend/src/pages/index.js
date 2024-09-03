@@ -1,3 +1,4 @@
+export { default as Modules } from "./Modules"
 export { default as Home } from "./Home"
 export { default as LandingPage } from "./LandingPage"
 export { default as Forum } from "./Forum"
