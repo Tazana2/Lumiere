@@ -5,10 +5,6 @@ import '../styles/Progress.css';
 export default function Progress() {
   const navigate = useNavigate();
 
-  const handleGoToModules = () => {
-    navigate('/modules'); // Redirige a la página de Modules
-  };
-
   return (
     <div className="progress-container">
       <h1 className="progress-title">Mi Progreso</h1>
@@ -24,7 +20,11 @@ export default function Progress() {
         <div className="topics-container">
           <div 
             className="topic-completed clickable-topic" 
-            onClick={handleGoToModules}
+            onClick={
+              () => {
+                navigate("/modules")
+              }
+            }
             role="button"
             tabIndex={0}
           >

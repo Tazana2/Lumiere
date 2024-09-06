@@ -1,6 +1,9 @@
 .logo-icon {
     width: 170px;
 }
+.logo-icon:hover {
+    cursor: pointer;
+}
 
 .nav-header {
     padding: 1rem;

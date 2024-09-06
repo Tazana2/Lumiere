@@ -18,14 +18,19 @@
 }
 
 .container p{
-    font-size: 14px;
+    font-size: 16px;
+    width: 99%;
     line-height: 20px;
     letter-spacing: 0.3px;
+    font-weight: 500;
     margin: 20px 0;
+    color: rgba(255, 255, 255, 0.809);
 }
 
 .container span{
-    font-size: 12px;
+    font-size: 18px;
+    color:rgb(126, 126, 126);
+    padding-bottom: 8px;
 }
 
 .container a{
@@ -38,10 +43,10 @@
 .container button{
     background-color: #512da8;
     color: #fff;
-    font-size: 12px;
-    padding: 10px 45px;
+    font-size: 14px;
+    padding: 15px 50px;
     border: 1px solid transparent;
-    border-radius: 8px;
+    border-radius: 12px;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -68,8 +73,8 @@
     background-color: #eee;
     border: none;
     margin: 8px 0;
-    padding: 10px 15px;
-    font-size: 13px;
+    padding: 16px 15px;
+    font-size: 16px;
     border-radius: 8px;
     width: 100%;
     outline: none;
@@ -196,4 +201,21 @@
 
 .container.active .toggle-right{
     transform: translateX(200%);
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar animación al contenedor */
+.container {
+    animation: slideIn 0.6s ease-out;
 }

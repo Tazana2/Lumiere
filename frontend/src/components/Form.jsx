@@ -17,9 +17,9 @@ function Form({route, method}) {
 
     const className = method === "login" ? "form-container sign-in" : "form-container sign-up"
     const ass = method === "login" ? true : false
-    const title = method === "login" ? "Sign In" : "Create Account"
-    const spanText = method === "login" ? "or use your email password" : "or use your email for registeration"
-    const btnText = method === "login" ? "Sign In" : "Sign Up"
+    const title = method === "login" ? "Iniciar Sesión" : "Crear Cuenta"
+    const spanText = method === "login" ? "Ingresa tu usuario y contraseña" : "Ingresa tus datos para registrarte"
+    const btnText = method === "login" ? "Inicia Sesión" : "Regístrate"
 
     const handleSubmit = async (e) => {
         setLoading(true)
