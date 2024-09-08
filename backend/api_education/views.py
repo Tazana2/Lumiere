@@ -13,22 +13,22 @@ class LessonList(generics.ListAPIView):
     serializer_class = serializers.LessonSerializer
     permission_classes = [IsAuthenticated]
 
-class FindPairLessonList(generics.ListAPIView):
-    queryset = models.FindPairExercises.objects.all()
-    serializer_class = serializers.FindPairLessonSerializer
+class MatchingExercisesList(generics.ListAPIView):
+    queryset = models.MatchingExercises.objects.all()
+    serializer_class = serializers.MatchingExercisesSerializer
     permission_classes = [IsAuthenticated]
 
-class FreeTextLessonList(generics.ListAPIView):
+class FreeTextExercisesList(generics.ListAPIView):
     queryset = models.FreeTextExercises.objects.all()
-    serializer_class = serializers.FreeTextLessonSerializer
+    serializer_class = serializers.FreeTextExercisesSerializer
     permission_classes = [IsAuthenticated]
 
-class SignLanguageLessonList(generics.ListAPIView):
-    queryset = models.SignLanguageExercises.objects.all()
-    serializer_class = serializers.SignLanguageLessonSerializer
+class SignsExercisesLessonList(generics.ListAPIView):
+    queryset = models.SignsExercises.objects.all()
+    serializer_class = serializers.SignsExercisesSerializer
     permission_classes = [IsAuthenticated]
 
-class EducationalStoryLessonList(generics.ListAPIView):
-    queryset = models.EducationalStoryExercises.objects.all()
-    serializer_class = serializers.EducationalStoryLesson
+class StoryExercisesList(generics.ListAPIView):
+    queryset = models.StoryExercises.objects.all()
+    serializer_class = serializers.StoryExercisesSerializer
     permission_classes = [IsAuthenticated]
