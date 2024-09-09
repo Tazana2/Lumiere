@@ -34,6 +34,7 @@ SECRET_KEY = "django-insecure-v%%m0&siklrtbjlswq4jgu-e5b+mea7aok+*ovoh4b&ee5k27n
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+AUTH_USER_MODEL = "api_users.CustomUser"
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
@@ -151,5 +152,3 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWS_CREDENTIALS = True
-
-AUTH_USER_MODEL = "api_users.CustomUser"
