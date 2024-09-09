@@ -5,8 +5,8 @@ function LoginRegister() {
         <>
             <div className="body">
                 <div className="container" id="container">
-                    <Form route="/api/users/token/" method="login"/>
-                    <Form route="/api/users/user/register/" method="register"/>
+                    <Form route="/users/api/token/" method="login"/>
+                    <Form route="/users/api/user/register/" method="register"/>
                     <div className="toggle-container">
                         <div className="toggle">
                             <div className="toggle-panel toggle-left">

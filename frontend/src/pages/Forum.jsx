@@ -13,7 +13,7 @@ function Forum() {
     }, [])
 
     const getPosts = () => {
-        api.get("/api/posts/")
+        api.get("/posts/api/")
             .then((res) => res.data)
             .then((data) => {
                 setPosts(data)
@@ -22,7 +22,7 @@ function Forum() {
     }
 
     const deletePost = (id) => {
-        api.delete(`/api/posts/delete/${id}/`)
+        api.delete(`/posts/api/delete/${id}/`)
             .then((res) => {
                 if (res.status === 204) {
                     setPosts(posts.filter((post) => post.id !== id))
@@ -34,7 +34,7 @@ function Forum() {
 
     const createPost = (e) => {
         e.preventDefault()
-        api.post("/api/posts/", {title, content})
+        api.post("/posts/api/", {title, content})
         .then((res) => {
             if (res.status === 201) {
                 setPosts([...posts, res.data])

@@ -1,8 +1,8 @@
-import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { Modules, Home, LandingPage, Forum, NotFound, LoginRegister, Monda } from "./pages";
-import { ProtectedRoute, NavBar } from "./components";
-import { AuthProvider } from "./contexts/AuthContext";
+import React from "react"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import { Modules, Home, LandingPage, Forum, NotFound, LoginRegister, Monda, Profile } from "./pages"
+import { ProtectedRoute, NavBar } from "./components"
+import { AuthProvider } from "./contexts/AuthContext"
 
 function Logout() {
     localStorage.clear()
@@ -38,6 +38,11 @@ function App() {
                             <Modules />
                         </ProtectedRoute>
                     } />
+                    <Route path="/profile" element={
+                        <ProtectedRoute>
+                            <Profile />
+                        </ProtectedRoute>
+                    } />
                     <Route path="/monda" element={
                         <ProtectedRoute>
                             <Monda />
@@ -50,4 +55,4 @@ function App() {
     )
 }
 
-export default App;
+export default App

@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
     const refreshToken = async () => {
         const refreshToken = localStorage.getItem(REFRESH_TOKEN)
         try {
-            const response = await api.post("/api/users/token/refresh/", {
+            const response = await api.post("/users/api/token/refresh/", {
                 refresh: refreshToken
             })
             if (response.status === 200) {
