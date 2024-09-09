@@ -9,24 +9,24 @@ class ModuleSerializer(serializers.ModelSerializer):
 class LessonSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Lesson
-        fields = ["id", "module", "title", "description"]
+        fields = ["id", "module", "title", "description", "order"]
 
-class FindPairLessonSerializer(serializers.ModelSerializer):
+class MatchingExercisesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.FindPairExercises
-        fields = ["id", "lesson", "title", "description", "image1", "image2", "text1", "text2"]
+        model = models.MatchingExercises
+        fields = ["id", "lesson", "question", "pairs"]
 
-class FreeTextLessonSerializer(serializers.ModelSerializer):
+class FreeTextExercisesSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.FreeTextExercises
-        fields = ["id", "lesson", "title", "description", "prompt"]
+        fields = ["id", "lesson", "question", "correct_answer"]
 
-class SignLanguageLessonSerializer(serializers.ModelSerializer):
+class SignsExercisesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.SignLanguageExercises
-        fields = ["id", "lesson", "title", "description", "video"]
+        model = models.SignsExercises
+        fields = ["id", "lesson", "question", "description", "reference"]
 
-class EducationalStoryLesson(serializers.ModelSerializer):
+class StoryExercisesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.EducationalStoryExercises
-        fields = ["id", "lesson", "title", "description", "content"]
+        model = models.StoryExercises
+        fields = ["id", "lesson", "question", "description", "content"]
