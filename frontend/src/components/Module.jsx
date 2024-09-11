@@ -9,8 +9,8 @@ const Module = () => {
   return (
     <div className="module-container">
       <div className="module-header">
-        <h1>Saludos 👋</h1>
-        <p>Aprende a saludar en lenguaje de señas</p>
+        <h1>Módulo 1</h1>
+        <p>Descripción del módulo</p>
       </div>
       <div className="module-levels">
         {levels.map((level, index) => (

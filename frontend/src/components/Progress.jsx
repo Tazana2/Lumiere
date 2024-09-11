@@ -10,7 +10,7 @@ export default function Progress() {
       <h1 className="progress-title">Mi Progreso</h1>
       
       <div className="progress-card">
-        <h2 className="progress-subtitle">Lenguaje de señas básico</h2>
+        <h2 className="progress-subtitle">Módulo 1</h2>
         
         <div className="progress-bar">
           <div className="progress-fill" style={{ width: '20%' }}></div>
@@ -28,13 +28,13 @@ export default function Progress() {
             role="button"
             tabIndex={0}
           >
-            <span>Saludos</span>
+            <span>Lección 1</span>
             <span className="completed-tag">Completado</span>
           </div>
-          <div className="topic">Frases básicas</div>
-          <div className="topic">Numeros</div>
-          <div className="topic">Colores</div>
-          <div className="topic">Familia</div>
+          <div className="topic">Lección 2</div>
+          <div className="topic">Lección 3</div>
+          <div className="topic">Lección 4</div>
+          <div className="topic">Lección 5</div>
         </div>
       </div>
       
@@ -43,17 +43,17 @@ export default function Progress() {
       <div className="up-next-container">
         <div className="up-next-item">
           <div className="up-next-icon">🧳</div>
-          <p className="up-next-text">Viaje</p>
+          <p className="up-next-text">Módulo 2</p>
           <p className="locked-text">Locked</p>
         </div>
         <div className="up-next-item">
           <div className="up-next-icon">🥩</div>
-          <p className="up-next-text">Comida</p>
+          <p className="up-next-text">Módulo 3</p>
           <p className="locked-text">Locked</p>
         </div>
         <div className="up-next-item">
           <div className="up-next-icon">✏️</div>
-          <p className="up-next-text">Fundamentos de gramática</p>
+          <p className="up-next-text">Módulo 3</p>
           <p className="locked-text">Locked</p>
         </div>
       </div>

@@ -1,0 +1,7 @@
+notebook
+tensorflow
+tensorflow-gpu
+matplotlib
+scikit-learn
+mediapipe
+numpy
