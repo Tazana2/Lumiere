@@ -1,88 +1,103 @@
+/* Animación al cargar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
 .progress-container {
   font-family: Arial, sans-serif;
-  max-width: 800px; /* Aumenta el tamaño del ancho máximo */
+  max-width: 800px;
   margin: 0 auto;
-  padding: 150px 20px 20px; /* Ajusta el padding superior para más espacio */
+  padding: 150px 20px 20px;
 }
 
 .progress-title {
-  font-size: 32px; /* Aumenta el tamaño de la fuente */
+  font-size: 32px;
   font-weight: bold;
   margin-bottom: 25px;
-  text-align: center; /* Centra el título */
+  text-align: center;
 }
 
 .progress-subtitle {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 20px;
-  text-align: center; /* Centra el subtítulo */
+  text-align: center;
 }
 
 .progress-card {
   background-color: #fff;
-  border-radius: 12px; /* Aumenta el radio para bordes más suaves */
-  padding: 30px; /* Incrementa el padding */
-  margin-bottom: 40px; /* Aumenta el margen inferior */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Agranda la sombra para más profundidad */
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, transform 0.3s; 
+  position: relative; /* Agregar posición relativa para manejar el z-index */
+}
+
+.progress-card:hover {
+  background-color: rgba(106, 56, 194, 0.5);
+  transform: scale(1.05);
 }
 
 .progress-bar {
-  height: 12px; /* Incrementa la altura de la barra de progreso */
+  height: 12px;
   background-color: #e0e0e0;
-  border-radius: 6px; /* Más suavidad en los bordes */
+  border-radius: 6px;
   margin-bottom: 15px;
-  overflow: hidden; /* Asegura que el relleno no sobresalga */
+  overflow: hidden;
 }
 
 .progress-fill {
-  width: 30%; /* Puedes ajustar dinámicamente este valor según el progreso */
   height: 100%;
   background-color:  #512da8;
   border-radius: 6px;
-  transition: width 0.5s ease; /* Añade una animación suave para el progreso */
+  transition: width 0.5s ease;
 }
 
 .progress-text {
-  font-size: 18px; /* Aumenta el tamaño de la fuente */
-  color: #333; /* Haz que el texto sea más visible */
+  font-size: 18px;
+  color: #333;
   margin-bottom: 25px;
 }
 
+/* Asegurar que los topics estén por encima de la progress-card */
 .topics-container {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  position: relative;
+  z-index: 2; /* Superponer sobre la progress-card */
 }
 
-.topic {
+.topic, .topic-completed {
   background-color: #f5f5f5;
   border-radius: 24px;
   padding: 10px 18px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s; /* Añade una animación de transformación */
+  transition: background-color 0.3s, transform 0.3s; 
 }
 
-.topic:hover {
-  background-color: rgba(106, 56, 194, 0.5);
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+.topic:hover, .topic-completed:hover {
+  background-color: rgba(106, 56, 194, 0.7);
+  transform: scale(1.05);
 }
 
 .topic-completed {
   background-color: #e8f5e9;
-  border-radius: 24px;
-  padding: 10px 18px;
-  font-size: 16px;
   display: flex;
   align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.topic-completed:hover {
-  background-color: rgba(106, 56, 194, 0.5);
-  transform: scale(1.05);
 }
 
 .completed-tag {

@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import { Modules, Home, LandingPage, Forum, NotFound, LoginRegister, Monda, Profile } from "./pages"
+import { Modules, Home, LandingPage, Forum, NotFound, LoginRegister, Profile, Exercise } from "./pages"
 import { ProtectedRoute, NavBar } from "./components"
 import { AuthProvider } from "./contexts/AuthContext"
 
@@ -43,9 +43,9 @@ function App() {
                             <Profile />
                         </ProtectedRoute>
                     } />
-                    <Route path="/monda" element={
+                    <Route path="/exercise" element={
                         <ProtectedRoute>
-                            <Monda />
+                            <Exercise />
                         </ProtectedRoute>
                     } />
                     <Route path="*" element={ <NotFound /> } />

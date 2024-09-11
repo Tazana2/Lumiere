@@ -16,11 +16,10 @@ const Module = () => {
         {levels.map((level, index) => (
           <div key={index} className="module-level">
             <span className="module-level-name">{level}</span>
-            <button className="module-start-button" onClick={
-              () => {
-                navigate("/monda")
-              }
-            }>Iniciar</button>
+            <button className="module-start-button" onClick={(e) => {
+              e.stopPropagation(); 
+              navigate("/exercise");
+            }}>Iniciar</button>
           </div>
         ))}
       </div>

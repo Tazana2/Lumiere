@@ -47,7 +47,6 @@
   background-color: white;
   border: 1px solid #e5e7eb;
   border-radius: 10px; /* Borde más suave */
-  cursor: pointer;
   transition: background-color 0.3s, transform 0.3s; /* Añade una transición de transformación */
 }
 
