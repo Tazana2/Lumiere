@@ -46,6 +46,7 @@ function NavBar() {
                         <>
                             <li><Link to="/forum">Foro</Link></li>
                             <li><Link to="/profile">Mi perfil</Link></li>
+                            <li><Link to="/dictionary">Diccionario</Link></li>
                             <li>
                                 <button onClick={ 
                                     () => {
