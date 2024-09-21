@@ -7,7 +7,7 @@ const Dictionary = () => {
 
   useEffect(() => {
     // Cargar los datos del JSON
-    fetch('../public/assets/signs_prueba.json')
+    fetch('../public/assets/dictionary.json')
       .then((response) => response.json())
       .then((data) => setSignsData(data))
       .catch((error) => console.error('Error al cargar los datos:', error));
