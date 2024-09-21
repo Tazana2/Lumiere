@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
+
 .hero-section {
     --background-dark: #2d3548;
     --text-light: rgba(255, 255, 255, 0.6);
@@ -8,7 +9,7 @@
     --spacing-m: 16px;
     --spacing-l: 24px;
     --spacing-xl: 32px;
-    --spacing-xxl: 64px;
+    --spacing-xxl: 0px;
     --width-container: 1200px;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
@@ -18,11 +19,26 @@
     padding: 0;
     box-sizing: border-box;
     align-items: flex-start;
-    background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+    background-image: linear-gradient(15deg, #ffffff 0%, #ffffff 150%);
     display: flex;
     min-height: 100vh; /* Cambiado de 100% a 100vh para asegurar que ocupe toda la altura de la ventana */
     justify-content: center;
     padding: var(--spacing-xxl) var(--spacing-l);
+    padding-top: 42px;
+}
+
+
+
+.title-dictionary {
+  --spacing-l: 24px;
+  --spacing-xxl: 9%;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-top: var(--spacing-xxl);
+  padding-bottom: 24px;
+
 }
 
 .card-grid {
@@ -171,5 +187,19 @@
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
     line-height: 1.4;
     word-spacing: 100vw;
+  }
+  
+  .search-bar-dictionary-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-bottom: 36px; /* Espacio debajo de la barra */
+  }
+  
+  .search-bar-dictionary {
+    width: 50%; /* Ajusta el ancho de la barra de búsqueda */
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    font-size: 16px;
   }
   

@@ -3,55 +3,84 @@ import "../styles/Dictionary.css";
 
 const Dictionary = () => {
   const [signsData, setSignsData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch('../public/assets/dictionary.json')
+    // Cargar los datos del JSON
+    fetch('../public/assets/signs_prueba.json')
       .then((response) => response.json())
       .then((data) => setSignsData(data))
       .catch((error) => console.error('Error al cargar los datos:', error));
   }, []);
 
-  // Añadir listeners para los videos una vez que los datos están cargados
-  useEffect(() => {
-    // Solo añadir los eventos si hay datos cargados
-    if (signsData.length > 0) {
-      const cards = document.querySelectorAll('.card');
-      cards.forEach((card) => {
-        const video = card.querySelector('.card__video');
+  // Filtrar los signos basados en el término de búsqueda
+  const filteredSigns = signsData.filter((sign) =>
+    sign.sign.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-        card.addEventListener('mouseenter', () => {
-          video.play();
-        });
-
-        card.addEventListener('mouseleave', () => {
-          video.pause();
-          video.currentTime = 0;
-        });
-      });
+  // Manejador para reproducir el video al hacer hover
+  const handleMouseEnter = (e, videoSrc) => {
+    const videoElement = e.currentTarget.querySelector('.card__video');
+    if (videoElement) {
+      videoElement.src = videoSrc;  // Asegura que el src se actualice correctamente
+      videoElement.play();
     }
-  }, [signsData]); // Ejecuta este efecto cuando `signsData` cambia
+  };
+
+  // Manejador para pausar el video al salir del hover
+  const handleMouseLeave = (e) => {
+    const videoElement = e.currentTarget.querySelector('.card__video');
+    if (videoElement) {
+      videoElement.pause();
+      videoElement.currentTime = 0;
+    }
+  };
 
   return (
     <>
-      <div>Diccionario</div>
-      <section className="hero-section">
-        <div className="card-grid">
-          {signsData.map((sign, index) => (
-            <a key={index} className="card" href="#">
-              <div className="card__background">
-                <video className="card__video" loop muted>
-                  <source src={sign.link} type="video/mp4" />
-                  Tu navegador no soporta la etiqueta video.
-                </video>
-              </div>
-              <div className="card__content">
-                <p className="card__category">SEÑA</p>
-                <h3 className="card__heading">{sign.sign}</h3>
-              </div>
-            </a>
-          ))}
+      <div className="dictionary-container">
+        <h1 className="title-dictionary">Diccionario de Lengua de Señas</h1>
+
+        {/* Barra de búsqueda */}
+        <div className="search-bar-dictionary-container">
+        <input
+          type="text"
+          className="search-bar-dictionary"
+          placeholder="Buscar señas..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)} // Actualizar el estado del término de búsqueda
+        />
         </div>
-      </section>
+
+        <section className="hero-section">
+          <div className="card-grid">
+            {filteredSigns.length > 0 ? (
+              filteredSigns.map((sign, index) => (
+                <a
+                  key={index}
+                  className="card"
+                  href="#"
+                  onMouseEnter={(e) => handleMouseEnter(e, sign.link)}  // Pasar el link correcto
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="card__background">
+                    <video className="card__video" loop muted>
+                      <source src={sign.link} type="video/mp4" />
+                      Tu navegador no soporta la etiqueta video.
+                    </video>
+                  </div>
+                  <div className="card__content">
+                    <p className="card__category">SEÑA</p>
+                    <h3 className="card__heading">{sign.sign}</h3>
+                  </div>
+                </a>
+              ))
+            ) : (
+              <p>No se encontraron resultados para "{searchTerm}".</p>
+            )}
+          </div>
+        </section>
+      </div>
     </>
   );
 };
