@@ -14,21 +14,24 @@ function ModuleDetail() {
     }, [])
 
     const getData = () => {
-        // Get module data
         api.get(`/education/api/modules/${idModule}/`)
             .then((res) => res.data)
             .then((data) => {
                 setModule(data)
             })
-            .catch((err) => console.log(err))
-        
-        // Get lessons data
+            .catch((err) => {
+                console.log(err)
+                navigate("/404")
+            })
         api.get(`/education/api/modules/${idModule}/lessons`)
             .then((res) => res.data)
             .then((data) => {
                 setLessons(data)
             })
-            .catch((err) => console.log(err))
+            .catch((err) => {
+                console.log(err)
+                setLessons([])
+            })
     }
 
     if (!module) {        
@@ -53,10 +56,9 @@ function ModuleDetail() {
 					{lessons.map((lesson, index) => (
 						<div key={index} className="module-level">
 							<span className="module-level-name">{lesson.title}</span>
-							<button className="module-start-button" onClick={(e) => {
-								e.stopPropagation() 
-								navigate(`lessons/${lesson.id}`)
-							}}>Iniciar</button>
+							<button className="module-start-button" onClick={
+                                () => navigate(`/module/${idModule}/lessons/${lesson.id}`)
+                            }>Iniciar</button>
 						</div>
 					))}
 				</div>

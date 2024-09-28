@@ -1,36 +1,36 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import api from "../api"
-import { LoadingIndicator } from "../components"
+import { LoadingIndicator, FindThePair, MultipleChoice } from "../components"
+import "../styles/LessonDetail.css"
 
 function LessonDetail() {
-    const { id, lessonType } = useParams()
+    const { id } = useParams()
     const [lesson, setLesson] = useState(null)
-    const [exercises, setExercises] = useState([])
+    const [loading, setLoading] = useState(true)
     const navigate = useNavigate()
 
     useEffect(() => {
         getLessonData()
-        // getExercisesData()
     }, [])
 
     const getLessonData = () => {
         api.get(`/education/api/lessons/${id}/`)
             .then((res) => res.data)
-            .then((data) => setLesson(data))
-            .catch((err) => console.log(err))
+            .then((data) => {
+                setLesson(data)
+                setLoading(false)
+            })
+            .catch((err) => {
+                console.log(err)
+                setLoading(false)
+                navigate("/404")
+            })
     }
 
-    // const getExercisesData = () => {
-    //     api.get(`/education/api/lessons/${lessonId}/exercises/${lessonType}/`)
-    //         .then((res) => res.data)
-    //         .then((data) => setExercises(data))
-    //         .catch((err) => console.log(err))
-    // }
-
-    if (!lesson) {
+    if (loading) {
         return (
-            <div className="module-container">
+            <div className="exercise-container">
                 <LoadingIndicator />
             </div>
         )
@@ -38,37 +38,33 @@ function LessonDetail() {
 
     return (
         <>
-            <div className="module-container">
-                <div className="module-header">
-                    <h1>{lesson.title}</h1>
-                    <p>{lesson.description}</p>
-                </div>
-                <div className="module-levels">
-                    {
-                        exercises.length === 0 && <h2>No hay ejercicios disponibles</h2>
-                    }
-                    <div className="module-level">
-                        <span className="module-level-name">¡Encuentra las parejas!</span>
-                        <button className="module-start-button" onClick={(e) => {
-                            e.stopPropagation() 
-                            navigate("/exercise")
-                        }}>Iniciar</button>
+            {
+                lesson.content === null ? (
+                <h2>La lección no tiene contenido</h2>
+                ) : (
+                    <>
+                    <div className="exercise-container">
+                        <h2>{lesson.title}:</h2>
+                        {
+                            lesson.content.map((item, index) => (
+                                <>
+                                {
+                                    item.type === "find_the_pair" && (
+                                        <FindThePair key={index} item={item} />
+                                    )
+                                }
+                                {
+                                    item.type === "multiple_choice" && (
+                                        <MultipleChoice key={index} item={item} />
+                                    )
+                                }
+                                </>
+                            ))
+                        }
                     </div>
-                    {/* <h2>Ejercicios</h2>
-                    {exercises.length > 0 ? (
-                        exercises.map((exercise, index) => (
-                            <div key={index} className="exercise-item">
-                                <p>{exercise.title || exercise.question || `Ejercicio ${index + 1}`}</p>
-                                <button onClick={() => navigate(`/exercise/${exercise.id}`)}>
-                                    Empezar
-                                </button>
-                            </div>
-                        ))
-                    ) : (
-                        <p>No hay ejercicios para esta lección.</p>
-                    )} */}
-                </div>
-            </div>
+                    </>
+                )
+            }
         </>
     )
 }
