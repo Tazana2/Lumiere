@@ -1,0 +1,5 @@
+export { default as Home } from "./Home"
+export { default as LandingPage } from "./LandingPage"
+export { default as Forum } from "./Forum"
+export { default as NotFound } from "./NotFound"
+export { default as LoginRegister } from "./LoginRegister"
