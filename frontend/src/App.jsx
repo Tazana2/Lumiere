@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import { ModuleDetail, Home, LandingPage, Forum, NotFound, LoginRegister, Profile, LessonDetail } from "./pages"
+import { ModuleDetail, Home, LandingPage, Forum, NotFound, LoginRegister, Profile, Exercise, LessonDetail, Dictionary } from "./pages"
 import { ProtectedRoute, NavBar } from "./components"
 import { AuthProvider } from "./contexts/AuthContext"
 
@@ -33,6 +33,11 @@ function App() {
                     <Route path="/profile" element={
                         <ProtectedRoute>
                             <Profile />
+                        </ProtectedRoute>
+                    } />
+                    <Route path="/dictionary" element={
+                        <ProtectedRoute>
+                            <Dictionary />
                         </ProtectedRoute>
                     } />
                     <Route path="/module/:idModule" element={
