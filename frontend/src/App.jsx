@@ -50,15 +50,11 @@ function App() {
                             <LessonDetail />
                         </ProtectedRoute>
                     } />
-                    <Route path="/exercise" element={
-                        <ProtectedRoute>
-                            <Exercise />
-                        </ProtectedRoute>
-                    } />
                     <Route path="/welcome" element={ <LandingPage /> } />
                     <Route path="/login-register" element={ <RegisterAndLogout /> } />
                     <Route path="/logout" element={ <Logout /> } />
                     <Route path="*" element={ <NotFound /> } />
+                    <Route path="/404" element={ <NotFound /> } />
                 </Routes>
             </BrowserRouter>
         </AuthProvider>
