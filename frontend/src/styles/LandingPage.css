@@ -46,6 +46,7 @@ margin-inline: auto;
 color: var(--text-light);
 line-height: 2rem;
 text-align: center;
+font-size: 19px;
 }
 
 .header-btns {

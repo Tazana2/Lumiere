@@ -1,0 +1,90 @@
+.module-container {
+  font-family: Arial, sans-serif;
+  max-width: 600px; /* Aumenta el tamaño máximo */
+  margin: 0 auto;
+  padding: 150px 30px 30px; /* Ajusta el padding superior */
+}
+
+.module-header {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899); /* Ajusta los colores del degradado para hacerlo más suave */
+  color: white;
+  padding: 30px; /* Incrementa el padding */
+  border-radius: 12px; /* Aumenta el radio del borde */
+  margin-bottom: 30px; /* Aumenta el espacio inferior */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Añade sombra para dar profundidad */
+}
+
+.module-header h1 {
+  margin: 0;
+  font-size: 28px; /* Aumenta el tamaño de la fuente */
+  font-weight: bold;
+}
+
+.module-header p {
+  margin: 15px 0 0; /* Ajusta el margen superior */
+  font-size: 18px; /* Aumenta el tamaño de la fuente del párrafo */
+}
+
+.module-content-wrapper {
+  display: flex;
+  gap: 25px; /* Aumenta la separación entre los elementos */
+  flex-direction: row-reverse;
+  align-items: flex-start; /* Alinea los contenidos en la parte superior */
+}
+
+.module-levels {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Mayor separación entre niveles */
+  flex: 1;
+}
+
+.module-level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; /* Aumenta el padding */
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px; /* Borde más suave */
+  transition: background-color 0.3s, transform 0.3s; /* Añade una transición de transformación */
+}
+
+.module-level:hover {
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el cursor */
+  background-color: #f3f4f6;
+}
+
+.module-level.selected {
+  background-color: #ececec; /* Color de fondo más claro cuando está seleccionado */
+}
+
+.module-level-name {
+  font-weight: bold;
+  font-size: 18px; /* Aumenta el tamaño de la fuente */
+}
+
+.module-start-button {
+  background-color: #fff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 25px; /* Incrementa el radio para hacerlo más redondeado */
+  padding: 8px 20px; /* Aumenta el tamaño del botón */
+  font-size: 16px; /* Aumenta el tamaño de la fuente */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Añade una animación suave */
+}
+
+.module-start-button:hover {
+  background-color: #e0e7ff; /* Color más visible al pasar el cursor */
+  transform: scale(1.05); /* Agranda ligeramente el botón al pasar el cursor */
+}
+
+.module-content {
+  flex: 2;
+  padding: 25px; /* Aumenta el padding */
+  background-color: #f9f9f9;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px; /* Borde más suave */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra suave para mayor profundidad */
+}

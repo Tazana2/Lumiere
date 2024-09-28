@@ -161,14 +161,14 @@ function LandingPage() {
                         </p>
                     </div>
                     <div className="footer-col">
-                        <h4>Quick Links</h4>
+                        <h4>Enláces rápidos</h4>
                         <ul className="footer-links">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/">About us</Link></li>
+                            <li><Link to="/">Inicio</Link></li>
+                            <li><Link to="/">Sobre nosotros</Link></li>
                         </ul>
                     </div>
                     <div className="footer-col">
-                        <h4>Contact Us</h4>
+                        <h4>Contáctanos</h4>
                         <ul className="footer-links">
                             <li>
                                 <Link to="/">

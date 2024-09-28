@@ -19,19 +19,15 @@ function NavBar() {
         <nav>
             <div className="nav-header">
                 <div className="nav-logo">
-                    <img src="/src/assets/lumiere.svg" alt="logo" className="logo-icon" onClick={
-                        () => {
-                            navigate("/")
-                        }
-                    }/>
+                    <Link to="/">
+                        <img src="/src/assets/lumiere.svg" alt="logo" className="logo-icon"/>
+                    </Link>
                 </div>
                 <div className="nav-menu-btn" onClick={ toggleNav }>
                     <i className="ri-menu-line"></i>
                 </div>
             </div>
             <ul className="nav-links" onClick={ toggleNav }>
-                <li><Link to="/">Inicio</Link></li>
-                <li><Link to="#">Sobre nosotros</Link></li>
                 {
                     !isAuthorized && (
                         <>
@@ -49,6 +45,7 @@ function NavBar() {
                     isAuthorized && (
                         <>
                             <li><Link to="/forum">Foro</Link></li>
+                            <li><Link to="/profile">Mi perfil</Link></li>
                             <li>
                                 <button onClick={ 
                                     () => {

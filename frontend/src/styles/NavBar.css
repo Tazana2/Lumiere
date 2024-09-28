@@ -1,6 +1,10 @@
 .logo-icon {
     width: 170px;
 }
+.logo-icon:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el cursor */
+}
 
 .nav-header {
     padding: 1rem;
@@ -8,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--extra-light);
+    
 }
 .nav-menu-btn {
     font-size: 1.5rem;
