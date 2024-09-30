@@ -53,6 +53,7 @@ function LessonDetail() {
                                         <FindThePair key={index} item={item} />
                                     )
                                 }
+                                <br />
                                 {
                                     item.type === "multiple_choice" && (
                                         <MultipleChoice key={index} item={item} />

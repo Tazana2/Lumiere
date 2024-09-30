@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import "../styles/MultipleChoice.css"
 
 function MultipleChoice({ item }) {
     const [selectedOption, setSelectedOption] = useState(null)
@@ -24,10 +25,10 @@ function MultipleChoice({ item }) {
     }
 
     return (
-        <div>
-            <h2>{item.title}</h2>
-            <p>{item.description}</p>
-            <p>{item.question}</p>
+        <div className="multiple-choice-container">
+            <h2 className="title">{item.title}</h2>
+            <p className="description">{item.description}</p>
+            <p className="description, question" >{item.question}</p>
             <div className="options-container">
                 {item.options.map((option, index) => (
                     <button
