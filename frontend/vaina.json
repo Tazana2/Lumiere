@@ -1,6 +1,46 @@
 [
     {
         "id": 1,
+        "type": "multiple_choice",
+        "title": "Selecciona la emoción correcta",
+        "description": "Selecciona la emoción que corresponde a la imagen.",
+        "instructions": "Elige la emoción correcta entre las opciones.",
+        "question": "¿La emocióm expresada es triste? 😢",
+        "options": [
+            "Sí",
+            "No"
+        ],
+        "correct_option": "Sí",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! 😢 es igual a Triste.",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 2,
+        "type": "multiple_choice",
+        "title": "Selecciona la emoción correcta",
+        "description": "Selecciona la emoción que corresponde a la imagen.",
+        "instructions": "Elige la emoción correcta entre las opciones.",
+        "question": "¿Qué emoción expresa esta cara? 😊",
+        "options": [
+            "Feliz",
+            "Triste",
+            "Enojado",
+            "Sorprendido"
+        ],
+        "correct_option": "Feliz",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! 😊 es igual a Feliz.",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 3,
         "type": "find_the_pair",
         "title": "Encuentra las parejas",
         "description": "Empareja las emociones con los emojis correctos.",
@@ -31,7 +71,7 @@
         }
     },
     {
-        "id": 2,
+        "id": 4,
         "type": "multiple_choice",
         "title": "Selecciona la emoción correcta",
         "description": "Selecciona la emoción que corresponde a la imagen.",
@@ -52,7 +92,7 @@
         }
     },
     {
-        "id": 3,
+        "id": 5,
         "type": "multiple_choice",
         "title": "Selecciona la emoción correcta",
         "description": "Selecciona la emoción que corresponde a la imagen.",
