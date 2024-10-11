@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import "../styles/MultipleChoice.css"
 
 function MultipleChoice({ item }) {
@@ -11,14 +11,16 @@ function MultipleChoice({ item }) {
         setSelectedOption(option)
     }
 
-    const handleSubmit = () => {
+    useEffect(() => {
         if (selectedOption === item.correct_option) {
             setFeedback(item.feedback.correct)
             setCompleted(true)
         } else {
-            setFeedback(item.feedback.incorrect)
+            if (selectedOption !== null) {
+                setFeedback(item.feedback.incorrect)
+            }
         }
-    }
+    }, [selectedOption])
 
     if (completed) {
         // Aquí se puede agregar una animación o mensaje de actividad completada
@@ -32,18 +34,16 @@ function MultipleChoice({ item }) {
             <div className="options-container">
                 {item.options.map((option, index) => (
                     <button
+                    
                         key={index}
                         onClick={() => handleOptionSelect(option)}
                         disabled={completed}
-                        className={selectedOption === index ? "selected" : ""}
+                        className={selectedOption === index ? "selected" : "" + " button-mc"}
                     >
                         {option}
                     </button>
                 ))}
             </div>
-            <button onClick={handleSubmit} disabled={completed || selectedOption === null}>
-                Enviar
-            </button>
             <p>{feedback}</p>
             <button 
 				className="button continuar"

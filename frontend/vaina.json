@@ -50,5 +50,24 @@
             "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
             "completed": "Has completado la pregunta."
         }
+    },
+    {
+        "id": 3,
+        "type": "multiple_choice",
+        "title": "Selecciona la emoción correcta",
+        "description": "Selecciona la emoción que corresponde a la imagen.",
+        "instructions": "Elige la emoción correcta entre las opciones.",
+        "question": "¿La emocióm expresada es triste? 😢",
+        "options": [
+            "Sí",
+            "No"
+        ],
+        "correct_option": "Sí",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! 😢 es igual a Triste.",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
     }
 ]

@@ -53,7 +53,7 @@ function FindThePair({ item }) {
 
     return (
         <div className="pair-exercises">
-            <h2 className="title">{item.title}</h2>
+            <h2 className="title-findthepair">{item.title}</h2>
             <p>{item.description}</p>
 			<div className="matching-container">
 				<div className="word-container">
