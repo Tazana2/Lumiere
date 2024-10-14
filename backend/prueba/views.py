@@ -9,6 +9,7 @@ import mediapipe as mp
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 
+
 # Inicialización de MediaPipe
 mp_holistic = mp.solutions.holistic
 mp_drawing = mp.solutions.drawing_utils
@@ -102,7 +103,11 @@ def prob_viz(res, actions, input_frame, colors):
 # Colores para cada acción
 colors = [(245,117,16), (117,245,16), (16,117,245)]
 
-# Generador de frames para el streaming
+from django.http import JsonResponse
+
+# Variable global para almacenar la predicción actual
+from django.core.cache import cache
+
 def gen_frames():
     cap = cv2.VideoCapture(0)
     sequence = []
@@ -125,59 +130,34 @@ def gen_frames():
 
             if len(sequence) == 30:
                 res = model.predict(np.expand_dims(sequence, axis=0))[0]
-                predictions.append(np.argmax(res))
-                
-                # Vizualización de resultados
-                if res[np.argmax(res)] > threshold:
-                    if len(sentence) > 0:
-                        if actions[np.argmax(res)] != sentence[-1]:
-                            sentence.append(actions[np.argmax(res)])
-                    else:
-                        sentence.append(actions[np.argmax(res)])
+                prediction = np.argmax(res)
 
-                if len(sentence) > 5:
-                    sentence = sentence[-5:]
+                if res[prediction] > threshold:
+                    # Almacena la predicción en el caché de Django
+                    cache.set('current_prediction', prediction)
+                    print(f'Current prediction: {prediction}')
 
+                predictions.append(prediction)
                 image = prob_viz(res, actions, image, colors)
-
-            cv2.rectangle(image, (0,0), (640, 40), (0,0,0), -1)
-            cv2.putText(image, ' '.join(sentence), (3,30), 
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
 
             ret, buffer = cv2.imencode('.jpg', image)
             frame = buffer.tobytes()
 
-            yield(b'--frame\r\n'
-                  b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+            yield (b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
     cap.release()
 
-# Vista para la página principal
-def index(request):
-    return render(request, 'index.html')
+# Nueva vista para obtener la predicción actual
+def get_prediction(request):
+    prediction = cache.get('current_prediction', None)
+    print(prediction)
+    if prediction is not None:
+        return JsonResponse({'prediction':  int(prediction)})
+    else:
+        return JsonResponse({'prediction': 'No prediction available'})
 
 # Vista para el feed de video
 def video_feed(request):
     return StreamingHttpResponse(gen_frames(), content_type='multipart/x-mixed-replace; boundary=frame')
 
-
-# def gen(camera):
-#     while True:
-#         ret, frame = camera.read()
-#         if not ret:
-#             break
-#         # Encode the frame to JPEG
-#         ret, jpeg = cv2.imencode('.jpg', frame)
-#         frame = jpeg.tobytes()
-#         # Yield the frame to be streamed
-#         yield (b'--frame\r\n'
-#                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
-
-# @gzip.gzip_page
-# def live_feed(request):
-#     return StreamingHttpResponse(gen(cv2.VideoCapture(0)),
-#                                  content_type='multipart/x-mixed-replace; boundary=frame')
-
-# def index(request):
-#     return render(request, 'prueba/live_feed.html')
- 

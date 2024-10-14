@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../api";
-import { LoadingIndicator, FindThePair, MultipleChoice } from "../components";
+import { LoadingIndicator, FindThePair, MultipleChoice, SignDetection } from "../components";
 import "../styles/LessonDetail.css";
 
 function LessonDetail() {
@@ -61,6 +61,9 @@ function LessonDetail() {
                         )}
                         {currentExercise.type === "multiple_choice" && (
                             <MultipleChoice item={currentExercise} onComplete={handleNextExercise} />
+                        )}
+                        {currentExercise.type === "sign_detection" && (
+                            <SignDetection item={currentExercise} onComplete={handleNextExercise} />
                         )}
                     </>
                 </div>
