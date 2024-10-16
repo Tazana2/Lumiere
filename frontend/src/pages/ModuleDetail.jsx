@@ -57,7 +57,7 @@ function ModuleDetail() {
 						<div key={index} className="module-level">
 							<span className="module-level-name">{lesson.title}</span>
 							<button className="module-start-button" onClick={
-                                () => navigate(`/module/${idModule}/lessons/${lesson.id}`)
+                                () => navigate(`/module/${idModule}/lessons/${lesson.id}`, { state: { lessonLength: lessons.length} })
                             }>Iniciar</button>
 						</div>
 					))}
