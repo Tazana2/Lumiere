@@ -61,4 +61,4 @@ function App() {
     )
 }
 
-export default Appgit 
+export default App
