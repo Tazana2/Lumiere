@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate, useLocation } from "react-router-dom"
 import api from "../api"
-import { LoadingIndicator, FindThePair, MultipleChoice, SignDetection } from "../components"
+import { LoadingIndicator, FindThePair, MultipleChoice, SignDetection, BackButton } from "../components"
 import "../styles/LessonDetail.css"
 
 function LessonDetail() {
@@ -64,7 +64,12 @@ function LessonDetail() {
                 <h2>La lección no tiene contenido</h2>
             ) : (
                 <div className="exercise-container">
-                    <h2>{lesson.title}:</h2>
+                    <div className="lesson-header"> {/* Contenedor flex para el BackButton y el título */}
+                        <BackButton /> {/* Botón de regreso */}
+                        <div className="lesson-title-card"> {/* Tarjeta para el título */}
+                         <h2 style={{ margin: 0 }}>{lesson.title}</h2>
+                        </div>
+                    </div>
                     <>
                         {currentExercise.type === "find_the_pair" && (
                             <FindThePair item={currentExercise} onComplete={handleNextExercise} />

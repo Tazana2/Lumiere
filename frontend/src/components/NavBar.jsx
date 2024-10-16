@@ -3,7 +3,6 @@ import { AuthContext } from "../contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
 import "../styles/NavBar.css"
 
-
 function NavBar() {
     const { isAuthorized } = useContext(AuthContext)
     const navigate = useNavigate()
@@ -15,19 +14,23 @@ function NavBar() {
         document.querySelector(".nav-menu-btn i").setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line")
     }
 
+    const handleLogoClick = () => {
+        window.location.reload() // Recarga la página al hacer clic en el logo
+    }
+
     return (
         <nav>
             <div className="nav-header">
-                <div className="nav-logo">
+                <div className="nav-logo" onClick={handleLogoClick}> {/* Añadir el evento onClick aquí */}
                     <Link to="/">
                         <img src="/src/assets/lumiere.svg" alt="logo" className="logo-icon"/>
                     </Link>
                 </div>
-                <div className="nav-menu-btn" onClick={ toggleNav }>
+                <div className="nav-menu-btn" onClick={toggleNav}>
                     <i className="ri-menu-line"></i>
                 </div>
             </div>
-            <ul className="nav-links" onClick={ toggleNav }>
+            <ul className="nav-links" onClick={toggleNav}>
                 {
                     !isAuthorized && (
                         <>
