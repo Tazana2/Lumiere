@@ -38,7 +38,6 @@ function Forum() {
             .then((res) => {
                 if (res.status === 201) {
                     setPosts([...posts, res.data]);
-                    alert("Post created successfully");
     
                     // Limpiar los campos de texto
                     setTitle(""); // Limpiar el campo del título
