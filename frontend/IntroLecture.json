@@ -1,0 +1,138 @@
+[
+    {
+        "id": 1,
+        "type": "multiple_choice",
+        "title": "Introducción a la Lengua de Señas Colombiano (LSC)",
+        "description": "Lo primero que debes saber es que la Lengua de Señas Colombiana (LSC) es un sistema de comunicación visual y gestual que se utiliza en Colombia para la comunicación de las personas sordas o no hablantes. Cada país tiene su propia lengua de señas, por lo que es importante conocer la de tu país. Para ello hemos creado Lumiere, en esta plataforma, a partir de ejercicios interactivos, podrás aprender la LSC de una manera fácil y entretenida. Más cosas que debes saber sobre el lenguaje de señas: \n\n1. La LSC es una lengua natural y completa, con su propia gramática y estructura. \n2. La LSC no es universal, cada país tiene su propia lengua de señas. \n3. La LSC es una lengua visual y gestual, por lo que es importante mantener contacto visual con la persona sorda. \n4. La LSC es una lengua en constante evolución, por lo que es importante estar actualizado en su uso. \n4. En Colombia es oficial la LSC, por lo que es importante su reconocimiento y uso en la sociedad. \n5. Además de Lumiere, existen plataformas creadas por la INSOR, organización que de manera oficial regula la LSC en Colombia.",
+        "instructions": "",
+        "question": "¿Has entendido todo hasta ahora? \n\n🙌",
+        "options": [
+            "Sí, continuar"
+        ],
+        "correct_option": "Sí, continuar",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 2,
+        "type": "multiple_choice",
+        "title": "INSOR y la LSC",
+        "description": "INSOR es el Instituto Nacional para Sordos, entidad que regula la Lengua de Señas Colombiana (LSC) en Colombia. INSOR es la entidad encargada de regular y promover el uso de la LSC en Colombia, además de brindar servicios y programas para la comunidad sorda. INSOR es la entidad encargada de regular y promover el uso de la LSC en Colombia, además de brindar servicios y programas para la comunidad sorda. INSOR es la entidad encargada de regular y promover el uso de la LSC en Colombia, además de brindar servicios y programas para la comunidad sorda. El LOGO de el INSOR es: ",
+        "instructions": "",
+        "question": "Imagen.png",
+        "options": [
+            "Entendido"
+        ],
+        "correct_option": "Entendido",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 3,
+        "type": "multiple_choice",
+        "title": "Selecciona la respuesta correcta",
+        "description": "Esta es tu primera pregunta de prueba. Solo tienes que seleccionar la respuesta correcta, tienes tantos intentos como quieras ¡Buena suerte!",
+        "instructions": "",
+        "question": "¿Cuál es la seña del INSOR en LSC?",
+        "options": [
+            "img1",
+            "img2",
+            "img3",
+            "img4"
+        ],
+        "correct_option": "img2",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 4,
+        "type": "multiple_choice",
+        "title": "Introducción al sistema de reconocimiento de señas",
+        "description": "En algunos ejercicios te encontrarás con el sistema de reconocimiento de señas, en el cual deberás realizar una seña frente a la cámara para que el sistema la detecte. Este sistema te permitirá practicar la LSC de una manera más interactiva y dinámica. A continuación te mostramos como funciona: \n\n1. Se te mostrará una seña que deberás realizar frente a la cámara. \n2. El sistema detectará la seña y te indicará si es correcta, deberas acomodarte de la siguiente manera: img.jpg \n3. Tendrás que hacer la seña hasta que el sistema la detecte. Pon mucha atención en como se hace \n4. Si la seña es incorrecta. ¡Diviértete y aprende con Lumiere!",
+        "instructions": "",
+        "question": "¿Has entendido todo hasta ahora? \n\n🙌",
+        "options": [
+            "Sí, continuar"
+        ],
+        "correct_option": "Sí, continuar",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 6,
+        "type": "sign_detection",
+        "title": "Realiza la seña correcta",
+        "description": "Haz la seña para decir 'Hola'. Imagen de la seña: img.jpg",
+        "instructions": "Realiza la seña para 'Hola' frente a la cámara. El sistema te indicará si es correcta.",
+        "sign_to_detect": 0,
+        "correct": "¡Bien hecho! Has realizado la seña de 'Hola' correctamente."
+    },
+    {
+        "id": 5,
+        "type": "find_the_pair",
+        "title": "Encuentra las parejas",
+        "description": "Empareja las emociones con los emojis correctos.",
+        "instructions": "Selecciona una palabra y luego el emoji que la representa. Si son correctos, se emparejarán.",
+        "pairs": [
+            {
+                "word": "Feliz",
+                "emoji": "😊"
+            },
+            {
+                "word": "Triste",
+                "emoji": "😢"
+            },
+            {
+                "word": "Enojado",
+                "emoji": "😠"
+            },
+            {
+                "word": "Sorprendido",
+                "emoji": "😲"
+            }
+        ],
+        "max_attempts": 3,
+        "feedback": {
+            "correct": "¡Bien hecho! Has emparejado correctamente.",
+            "incorrect": "Inténtalo de nuevo.",
+            "completed": "¡Has encontrado todas las parejas!"
+        }
+    },
+    {
+        "id": 7,
+        "type": "multiple_choice",
+        "title": "Selecciona la emoción correcta",
+        "description": "Selecciona la emoción que corresponde a la imagen.",
+        "instructions": "Elige la emoción correcta entre las opciones.",
+        "question": "¿Qué emoción expresa esta cara? 😊",
+        "options": [
+            "Feliz",
+            "Triste",
+            "Enojado",
+            "Sorprendido"
+        ],
+        "correct_option": "Feliz",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! 😊 es igual a Feliz.",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    }
+]
