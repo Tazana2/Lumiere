@@ -1,0 +1,25 @@
+.back-button {
+    width: 50px; 
+    height: 50px; 
+    background-color: #ffffff;
+    color: white; 
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 20px; 
+    margin-top: 20px;
+}
+
+.back-button img {
+    width: 70%; 
+    height: auto;
+}
+
+.back-button:hover {
+    background-color:  rgba(106, 56, 194, 0.5);
+}

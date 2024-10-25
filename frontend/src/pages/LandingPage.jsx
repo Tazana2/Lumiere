@@ -44,7 +44,7 @@ function LandingPage() {
             <header className="header-container section-container">
                 <section className="emptysec"></section>
                 <h2><img src="/src/assets/ai.png" alt="bag" />AI Powered</h2>
-                <h1>La mejor manera <br /> de aprender <span>LSC</span></h1>
+                <h1>Aprender <span>LSC</span><br /> nunca fue tan fácil </h1>
                 <p>
                 Lumiere es una plataforma gratuita y libre para el aprendizaje de LCS
                 (Lenguaje de Señas Colombiano), que aprovecha la IA y diferentes tecnologías

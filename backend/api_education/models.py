@@ -1,7 +1,5 @@
-from django.contrib.auth import get_user_model
 from django.db import models
-
-User = get_user_model()
+from django.conf import settings
 
 class Module(models.Model):
     title = models.CharField(max_length=255)
@@ -17,3 +15,15 @@ class Lesson(models.Model):
 
     def __str__(self):
         return f"{self.title} - {self.module.title}"
+
+
+class UserProgress(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
+    is_completed = models.BooleanField(default=False)
+
+    class Meta:
+        unique_together = ('user', 'lesson')
+
+    def __str__(self):
+        return f"{self.user.username} - {self.lesson.title}: {self.is_completed}"

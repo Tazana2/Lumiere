@@ -10,3 +10,8 @@ class LessonSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Lesson
         fields = ["id", "module", "title", "content"]
+
+class UserProgressSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.UserProgress
+        fields = ['user', 'lesson', 'is_completed']

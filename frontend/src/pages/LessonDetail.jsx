@@ -1,52 +1,57 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import api from "../api";
-import { LoadingIndicator, FindThePair, MultipleChoice, SignDetection } from "../components";
-import "../styles/LessonDetail.css";
+import { useState, useEffect } from "react"
+import { useParams, useNavigate, useLocation } from "react-router-dom"
+import { LoadingIndicator, FindThePair, MultipleChoice, SignDetection, BackButton } from "../components"
+import api from "../api"
+import "../styles/LessonDetail.css"
 
 function LessonDetail() {
-    const { id } = useParams();
-    const [lesson, setLesson] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0); // Nuevo estado para controlar el ejercicio actual
-    const navigate = useNavigate();
+    const { idModule, id } = useParams()
+    const [lesson, setLesson] = useState(null)
+    const [loading, setLoading] = useState(true)
+    const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0)
+    const navigate = useNavigate()
 
     useEffect(() => {
-        getLessonData();
-    }, []);
-
-    const getLessonData = () => {
         api.get(`/education/api/lessons/${id}/`)
             .then((res) => res.data)
             .then((data) => {
-                setLesson(data);
-                setLoading(false);
+                setLesson(data)
+                setLoading(false)
             })
             .catch((err) => {
-                console.log(err);
-                setLoading(false);
-                navigate("/404");
-            });
-    };
+                console.log(err)
+                setLoading(false)
+                navigate("/404")
+            })
+    }, [])
+
+    const updateProgressBackend = () => {
+        api.put(`/education/api/update/${id}/`, {
+            completed: true,
+        })
+            .catch((err) => console.log(err))
+            .finally(() => {
+                navigate("/")
+            })
+    }
 
     const handleNextExercise = () => {
         if (currentExerciseIndex < lesson.content.length - 1) {
-            setCurrentExerciseIndex(currentExerciseIndex + 1); // Avanza al siguiente ejercicio
+            setCurrentExerciseIndex(currentExerciseIndex + 1) // Avanza al siguiente ejercicio
         } else {
-            alert("¡Has completado la lección!"); // Mensaje cuando se completan todos los ejercicios
-            // Aquí puedes redirigir o realizar alguna otra acción si es necesario.
+            updateProgressBackend()
         }
-    };
+    }
 
     if (loading) {
         return (
             <div className="exercise-container">
                 <LoadingIndicator />
             </div>
-        );
+        )
     }
 
-    const currentExercise = lesson.content[currentExerciseIndex]; // Mostrar el ejercicio actual
+    const currentExercise = lesson.content[currentExerciseIndex]
 
     return (
         <>
@@ -54,7 +59,12 @@ function LessonDetail() {
                 <h2>La lección no tiene contenido</h2>
             ) : (
                 <div className="exercise-container">
-                    <h2>{lesson.title}:</h2>
+                    <div className="lesson-header"> {/* Contenedor flex para el BackButton y el título */}
+                        <BackButton /> {/* Botón de regreso */}
+                        <div className="lesson-title-card"> {/* Tarjeta para el título */}
+                        <h2 style={{ margin: 0 }}>{lesson.title}</h2>
+                        </div>
+                    </div>
                     <>
                         {currentExercise.type === "find_the_pair" && (
                             <FindThePair item={currentExercise} onComplete={handleNextExercise} />
@@ -69,7 +79,7 @@ function LessonDetail() {
                 </div>
             )}
         </>
-    );
+    )
 }
 
-export default LessonDetail;
+export default LessonDetail

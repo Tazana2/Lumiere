@@ -1,35 +1,45 @@
 .post-container {
-    padding: 10px;
+    padding: 20px;
     margin: 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background-color: #fff; /* Mismo color de fondo que el foro */
+    border-radius: 10px; /* Bordes redondeados más grandes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 .post-title {
+    font-size: 1.5rem; /* Aumenta el tamaño del título */
     color: #333;
+    margin-bottom: 10px; /* Espaciado entre el título y el contenido */
 }
 
 .post-content {
     color: #666;
+    margin-bottom: 10px; /* Espaciado entre el contenido y la fecha */
 }
 
 .post-date {
     color: #999;
-    font-size: 0.8rem;
+    font-size: 0.9rem; /* Tamaño de fuente un poco más grande */
+    margin-bottom: 10px; /* Espaciado entre la fecha y el botón */
 }
 
 .delete-button {
-    background-color: #f44336;
-    /* Red */
+    background-color: #f44336; /* Color rojo */
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px; /* Ajuste de padding para que se vea mejor */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .delete-button:hover {
-    background-color: #d32f2f;
-    /* Darker red */
+    background-color: #d32f2f; /* Rojo más oscuro en hover */
+}
+
+.post-divider {
+    border: none; /* Sin borde por defecto */
+    height: 2px; /* Altura de la línea */
+    background-color: #ccc; /* Color de la línea */
+    margin: 10px 0; /* Margen superior e inferior para separarla del texto */
 }
