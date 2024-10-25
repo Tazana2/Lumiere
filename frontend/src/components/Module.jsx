@@ -10,12 +10,12 @@ function Module({mode, module}) {
 
 	useEffect(() => {
 		if (mode === "principal") {
-			api.get(`/education/api/progress/${module.id}`)
-				.then((res) => res.data)
-				.then((data) => {
-					setProgress(data.progress_percentage)
-				})
-				.catch((err) => console.log(err))
+			api.get(`/education/api/modules/${module.id}/progress/`)
+			.then((res) => res.data)
+			.then((data) => {
+				setProgress(data.progress_percentage)
+			})
+			.catch((err) => console.log(err))
 		}
 	}, [module.id, mode])
 

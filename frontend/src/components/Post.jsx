@@ -1,8 +1,8 @@
-import React from "react";
-import "../styles/Post.css";
+import React from "react"
+import "../styles/Post.css"
 
 function Post({ post, onDelete }) {
-    const formattedDate = new Date(post.date_posted).toLocaleDateString();
+    const formattedDate = new Date(post.date_posted).toLocaleDateString()
 
     return (
         <div className="post-container">
@@ -14,7 +14,7 @@ function Post({ post, onDelete }) {
                 Eliminar
             </button>
         </div>
-    );
+    )
 }
 
-export default Post;
+export default Post
