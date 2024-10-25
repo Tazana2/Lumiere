@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate, useLocation } from "react-router-dom"
-import api from "../api"
 import { LoadingIndicator, FindThePair, MultipleChoice, SignDetection, BackButton } from "../components"
+import api from "../api"
 import "../styles/LessonDetail.css"
 
 function LessonDetail() {
-    const location = useLocation()
     const { idModule, id } = useParams()
     const [lesson, setLesson] = useState(null)
     const [loading, setLoading] = useState(true)
@@ -13,10 +12,6 @@ function LessonDetail() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        getLessonData()
-    }, [])
-
-    const getLessonData = () => {
         api.get(`/education/api/lessons/${id}/`)
             .then((res) => res.data)
             .then((data) => {
@@ -28,23 +23,23 @@ function LessonDetail() {
                 setLoading(false)
                 navigate("/404")
             })
-    }
+    }, [])
 
-    const updateProgressBackend = (newProgress) => {
-        api.put(`/education/api/update/${idModule}/${id}/`, {
-            progress_percentage: newProgress
-        })        
-            .then((res) => res.data)
+    const updateProgressBackend = () => {
+        api.put(`/education/api/update/${id}/`, {
+            completed: true,
+        })
             .catch((err) => console.log(err))
-        
-            navigate(`/module/${idModule}`)
+            .finally(() => {
+                navigate("/")
+            })
     }
 
     const handleNextExercise = () => {
         if (currentExerciseIndex < lesson.content.length - 1) {
             setCurrentExerciseIndex(currentExerciseIndex + 1) // Avanza al siguiente ejercicio
         } else {
-            updateProgressBackend((1/location.state.lessonLength)*100)
+            updateProgressBackend()
         }
     }
 
@@ -67,7 +62,7 @@ function LessonDetail() {
                     <div className="lesson-header"> {/* Contenedor flex para el BackButton y el título */}
                         <BackButton /> {/* Botón de regreso */}
                         <div className="lesson-title-card"> {/* Tarjeta para el título */}
-                         <h2 style={{ margin: 0 }}>{lesson.title}</h2>
+                        <h2 style={{ margin: 0 }}>{lesson.title}</h2>
                         </div>
                     </div>
                     <>

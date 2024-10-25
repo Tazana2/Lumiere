@@ -1,45 +1,42 @@
-import api from "../api";
-import { useParams, useNavigate } from "react-router-dom";
-import { LoadingIndicator, BackButton } from "../components";
-import { useEffect, useState } from "react";
+import api from "../api"
+import { useParams, useNavigate } from "react-router-dom"
+import { LoadingIndicator, BackButton } from "../components"
+import { useEffect, useState } from "react"
 
 function ModuleDetail() {
-    const { idModule } = useParams();
-    const [module, setModule] = useState(null);
-    const [lessons, setLessons] = useState([]);
-    const navigate = useNavigate();
+    const { idModule } = useParams()
+    const [module, setModule] = useState(null)
+    const [lessons, setLessons] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
-        getData();
-    }, []);
-
-    const getData = () => {
         api.get(`/education/api/modules/${idModule}/`)
             .then((res) => res.data)
             .then((data) => {
-                setModule(data);
+                setModule(data)
             })
             .catch((err) => {
-                console.log(err);
-                navigate("/404");
-            });
+                console.log(err)
+                navigate("/404")
+        })
         api.get(`/education/api/modules/${idModule}/lessons`)
             .then((res) => res.data)
             .then((data) => {
-                setLessons(data);
+                setLessons(data)
             })
             .catch((err) => {
-                console.log(err);
-                setLessons([]);
-            });
-    };
+                console.log(err)
+                setLessons([])
+        })
+    }, [])
+
 
     if (!module) {        
         return (
             <div className="module-container">
                 <LoadingIndicator />
             </div>
-        );
+        )
     }
 
     return (
@@ -63,7 +60,7 @@ function ModuleDetail() {
                 ))}
             </div>
         </div>
-    );
+    )
 }
 
-export default ModuleDetail;
+export default ModuleDetail

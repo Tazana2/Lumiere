@@ -16,14 +16,14 @@ class Lesson(models.Model):
     def __str__(self):
         return f"{self.title} - {self.module.title}"
 
+
 class UserProgress(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    module = models.ForeignKey(Module, on_delete=models.CASCADE)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
-    progress_percentage = models.DecimalField(max_digits=5, decimal_places=2, default=0.00)
+    is_completed = models.BooleanField(default=False)
 
     class Meta:
-        unique_together = ('user', 'module', 'lesson')
+        unique_together = ('user', 'lesson')
 
     def __str__(self):
-        return f"{self.user.username} - {self.lesson.title}: {self.progress_percentage}%"
+        return f"{self.user.username} - {self.lesson.title}: {self.is_completed}"

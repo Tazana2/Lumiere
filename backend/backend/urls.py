@@ -8,6 +8,6 @@ urlpatterns = [
     path("users/", include("api_users.urls")),
     path("education/", include("api_education.urls")),
     path("posts/", include("api_posts.urls")),
-    path('', include('prueba.urls')),  # Include the app's URLs
+    path("", include("prueba.urls")),
 
 ]
