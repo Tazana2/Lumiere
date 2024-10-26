@@ -5,6 +5,7 @@ function MultipleChoice({ item, onComplete }) {
     const [selectedOption, setSelectedOption] = useState(null);
     const [feedback, setFeedback] = useState("");
     const [completed, setCompleted] = useState(false);
+    let description = item.description.split("&&");
 
     // Reiniciar el estado cuando cambia el ejercicio (item)
     useEffect(() => {
@@ -38,7 +39,16 @@ function MultipleChoice({ item, onComplete }) {
     return (
         <div className="multiple-choice-container">
             <h2 className="title">{item.title}</h2>
-            <p className="description">{item.description}</p>
+            <p className="description">
+                {
+                    description.map((paragraph, index) => (
+                        <span key={index}>
+                            {paragraph}
+                            <br />
+                        </span>
+                    ))
+                }
+            </p>
             <p className="question">{item.question}</p>
             <div className="options-container">
                 {item.options.map((option, index) => (

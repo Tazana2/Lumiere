@@ -80,7 +80,13 @@ function FindThePair({ item, onComplete }) { // Añadimos la prop onComplete
                             disabled={isEmojiDisabled(emoji)}
                             className={`emoji-button ${selectedEmoji === index ? "selected" : ""} ${isEmojiDisabled(emoji) ? "matched" : ""}`}
                         >
-                            {emoji}
+                            {
+                                emoji.includes("/") ? (
+                                    <img src={emoji} alt="imagen" />
+                                ) : (
+                                    emoji
+                                )
+                            }
                         </button>
                     ))}
                 </div>
