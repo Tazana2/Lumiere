@@ -48,3 +48,9 @@
 .nav-links a:hover {
     color: var(--primary-color);
 }
+
+.nav-container.logged-in {
+    /* Estilo cuando el usuario está autenticado (quita el box-shadow) */
+    box-shadow: none;
+    padding: 1.5rem 10%;
+}

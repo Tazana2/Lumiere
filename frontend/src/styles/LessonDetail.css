@@ -1,5 +1,5 @@
 .exercise-container {
-    padding-top: 8rem; 
+    padding-top: 1rem; 
     margin: 0 auto;
     max-width: 1200px;
   }
@@ -31,7 +31,7 @@
   .lesson-header {
     display: flex; /* Utilizar flexbox para alinear los elementos */
     align-items: center; /* Centrar verticalmente los elementos */
-    margin-bottom: 20px; /* Espacio debajo del contenedor */
+    margin-bottom: 5%; /* Espacio debajo del contenedor */
 }
 
   .lesson-title-card {

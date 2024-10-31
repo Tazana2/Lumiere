@@ -19,7 +19,7 @@ function NavBar() {
     }
 
     return (
-        <nav>
+        <nav className={`nav-container ${isAuthorized ? "logged-in" : ""}`}>
             <div className="nav-header">
                 <div className="nav-logo" onClick={handleLogoClick}> {/* Añadir el evento onClick aquí */}
                     <Link to="/">

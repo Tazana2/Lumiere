@@ -1,6 +1,6 @@
 .multiple-choice-container {
-    background-color: #f0f4f8;
-    padding: 16px;
+    background-color: #f5f5f5;
+    padding: 32px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -8,22 +8,20 @@
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
   .title {
     font-size: 32px;
     margin-bottom: 20px;
-    text-align: center;
     color: #333;
+    font-variation-settings: 'wght' 400;
+    text-align: unset;
   }
   
   .description, .question {
     font-size: 18px;
     margin-bottom: 15px;
-    text-align: center;
-    color: #555;
+    color: #727272;
   }
   
   .options-container {
