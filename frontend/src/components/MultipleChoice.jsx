@@ -49,8 +49,9 @@ function MultipleChoice({ item, onComplete }) {
                     ))
                 }
             </p>
+            {item.image && <img src={item.image} alt="Exercise Illustration" className="exercise-image" />}
             <p className="question">{item.question}</p>
-            <div className="options-container">
+            <div className={item.option_type === "images" ? "options-container-imgs" : "options-container"}>
                 {item.options.map((option, index) => (
                     <button
                         key={index}

@@ -30,6 +30,13 @@
     gap: 10px;
     width: 100%;
   }
+
+  .options-container-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide el contenedor en dos columnas iguales */
+    gap: 10px; /* Espacio entre las opciones */
+    width: 100%;
+  }
   
   .button-mc {
     width:100%;
@@ -69,6 +76,11 @@
   .button.continuar {
     background-color: #512da8;
     color: white;
+  }
+
+  .exercise-image {
+    max-width: 50%;
+    border-radius: 12px;
   }
   
   @media (max-width: 600px) {
