@@ -79,11 +79,30 @@
         {
             "id": 5,
             "type": "multiple_choice",
-            "title": "Introducción al sistema de reconocimiento de señas",
-            "description": "En algunos ejercicios te encontrarás con el sistema de reconocimiento de señas, en el cual deberás realizar una seña frente a la cámara para que el sistema la detecte. Este sistema te permitirá practicar la LSC de una manera más interactiva y dinámica. A continuación te mostramos como funciona: && 1. Se te mostrará una seña que deberás realizar frente a la cámara. &&2. El sistema detectará la seña y te indicará si es correcta, deberas acomodarte manera que se vea tu torso: ",
+            "title": "INSOR y la LSC",
+            "description": "INSOR es el Instituto Nacional para Sordos, entidad que regula la Lengua de Señas Colombiana (LSC) en Colombia. Esta entidad presta servicios educativos y promueve el uso de la LSC. La seña que representa el INSOR es: ",
             "instructions": "",
-            "image": "https://i.ibb.co/ThN59qq/Screenshot-from-2024-10-31-17-22-43.png",
-            "question": "3. ¡Diviértete aprendiendo!",
+            "image": "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png",
+            "question": "",
+            "options": [
+                "Entendido"
+            ],
+            "correct_option": "Entendido",
+            "max_attempts": 2,
+            "feedback": {
+                "correct": "¡Correcto! Sigamos",
+                "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+                "completed": "Has completado la pregunta."
+            }
+        },
+        {
+            "id": 6,
+            "type": "multiple_choice",
+            "title": "Selecciona la seña correcta",
+            "description": "Mira la siguiente seña y selecciona a lo que corresponde",
+            "instructions": "",
+            "video": "/hola.mp4",
+            "question": "",
             "options": [
                 "¡Entendido!, continuar"
             ],
@@ -96,7 +115,7 @@
             }
         },
         {
-            "id": 6,
+            "id": 7,
             "type": "sign_detection",
             "title": "Realiza la seña correcta",
             "description": "Haz la seña para decir 'Hola'. Imagen de la seña: img.jpg",
@@ -105,7 +124,7 @@
             "correct": "¡Bien hecho! Has realizado la seña de 'Hola' correctamente."
         },
         {
-            "id": 7,
+            "id": 8,
             "type": "find_the_pair",
             "title": "Encuentra las parejas",
             "description": "Empareja las emociones con los emojis correctos.",
@@ -136,7 +155,7 @@
             }
         },
         {
-            "id": 8,
+            "id": 9,
             "type": "multiple_choice",
             "title": "Selecciona la emoción correcta",
             "description": "Selecciona la emoción que corresponde a la imagen.",

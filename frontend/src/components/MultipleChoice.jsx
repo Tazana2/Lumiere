@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/MultipleChoice.css";
 
+
 function MultipleChoice({ item, onComplete }) {
     const [selectedOption, setSelectedOption] = useState(null);
     const [feedback, setFeedback] = useState("");
@@ -50,6 +51,7 @@ function MultipleChoice({ item, onComplete }) {
                 }
             </p>
             {item.image && <img src={item.image} alt="Exercise Illustration" className="exercise-image" />}
+            {item.video && <video className="video_multiplechoce" loop muted autoPlay> <source src={item.video} type="video/mp4"/>Tu navegador no soporta la etiqueta video.</video>}
             <p className="question">{item.question}</p>
             <div className={item.option_type === "images" ? "options-container-imgs" : "options-container"}>
                 {item.options.map((option, index) => (
@@ -60,7 +62,7 @@ function MultipleChoice({ item, onComplete }) {
                         className={selectedOption === option ? "selected button-mc" : "button-mc"}
                     >
                         {
-                        option.includes("/") ? (
+                        option.includes("http") ? (
                             <img src={option} alt="imagen" />
                         ) : (
                             option
@@ -69,6 +71,7 @@ function MultipleChoice({ item, onComplete }) {
                     </button>
                     
                 ))}
+            
             </div>
             <p>{feedback}</p>
         </div>
