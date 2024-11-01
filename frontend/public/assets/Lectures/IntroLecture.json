@@ -104,9 +104,12 @@
             "video": "/hola.mp4",
             "question": "",
             "options": [
-                "¡Entendido!, continuar"
+                "Hola",
+                "Enojado",
+                "Adiós",
+                "Gracias"
             ],
-            "correct_option": "¡Entendido!, continuar",
+            "correct_option": "Hola",
             "max_attempts": 2,
             "feedback": {
                 "correct": "¡Correcto! Sigamos",
@@ -118,7 +121,7 @@
             "id": 7,
             "type": "sign_detection",
             "title": "Realiza la seña correcta",
-            "description": "Haz la seña para decir 'Hola'. Imagen de la seña: img.jpg",
+            "description": "Haz la seña para decir 'Hola'. Imagen de la seña: img.jpg", 
             "instructions": "Realiza la seña para 'Hola' frente a la cámara. El sistema te indicará si es correcta.",
             "sign_to_detect": 0,
             "correct": "¡Bien hecho! Has realizado la seña de 'Hola' correctamente."
@@ -131,20 +134,12 @@
             "instructions": "Selecciona una palabra y luego el emoji que la representa. Si son correctos, se emparejarán.",
             "pairs": [
                 {
-                    "word": "Feliz",
-                    "emoji": "😊"
+                    "word": "INSOR",
+                    "emoji": "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png"
                 },
                 {
-                    "word": "Triste",
-                    "emoji": "😢"
-                },
-                {
-                    "word": "Enojado",
-                    "emoji": "😠"
-                },
-                {
-                    "word": "Sorprendido",
-                    "emoji": "😲"
+                    "word": "HOLA",
+                    "emoji": "https://i.ibb.co/bdGh2gK/Screenshot-from-2024-11-01-16-24-54.png"
                 }
             ],
             "max_attempts": 3,
@@ -152,27 +147,6 @@
                 "correct": "¡Bien hecho! Has emparejado correctamente.",
                 "incorrect": "Inténtalo de nuevo.",
                 "completed": "¡Has encontrado todas las parejas!"
-            }
-        },
-        {
-            "id": 9,
-            "type": "multiple_choice",
-            "title": "Selecciona la emoción correcta",
-            "description": "Selecciona la emoción que corresponde a la imagen.",
-            "instructions": "Elige la emoción correcta entre las opciones.",
-            "question": "¿Qué emoción expresa esta cara? 😊",
-            "options": [
-                "Feliz",
-                "Triste",
-                "Enojado",
-                "Sorprendido"
-            ],
-            "correct_option": "Feliz",
-            "max_attempts": 2,
-            "feedback": {
-                "correct": "¡Correcto! 😊 es igual a Feliz.",
-                "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
-                "completed": "Has completado la pregunta."
             }
         }
     ]

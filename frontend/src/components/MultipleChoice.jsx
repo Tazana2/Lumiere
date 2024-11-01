@@ -51,7 +51,7 @@ function MultipleChoice({ item, onComplete }) {
                 }
             </p>
             {item.image && <img src={item.image} alt="Exercise Illustration" className="exercise-image" />}
-            {item.video && <video className="video_multiplechoce" loop muted autoPlay> <source src={item.video} type="video/mp4"/>Tu navegador no soporta la etiqueta video.</video>}
+            {item.video && <div className="video_mp_wrapper"><video className="video_multiplechoce" loop muted autoPlay> <source src={item.video} type="video/mp4"/>Tu navegador no soporta la etiqueta video.</video> </div> }
             <p className="question">{item.question}</p>
             <div className={item.option_type === "images" ? "options-container-imgs" : "options-container"}>
                 {item.options.map((option, index) => (

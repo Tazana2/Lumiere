@@ -82,6 +82,17 @@
     max-width: 50%;
     border-radius: 12px;
   }
+
+  .video_mp_wrapper {
+  }
+
+  .video_multiplechoce {
+    width: 230px; /* Define el ancho que deseas */
+    height: 260px; /* Define la altura que deseas */
+    object-fit: cover; /* Llena el espacio manteniendo el video centrado */
+    overflow: hidden; /* Recorta cualquier exceso */
+    border-radius: 10%;
+}
   
   @media (max-width: 600px) {
     .multiple-choice-container {
