@@ -59,8 +59,15 @@ function MultipleChoice({ item, onComplete }) {
                         disabled={completed}
                         className={selectedOption === option ? "selected button-mc" : "button-mc"}
                     >
-                        {option}
+                        {
+                        option.includes("/") ? (
+                            <img src={option} alt="imagen" />
+                        ) : (
+                            option
+                        )
+                        }   
                     </button>
+                    
                 ))}
             </div>
             <p>{feedback}</p>

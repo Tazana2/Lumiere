@@ -63,12 +63,12 @@
             "option_type" : "images",
             "question": "¿Cuál es la seña del INSOR en LSC?",
             "options": [
-                "img1",
-                "img2",
-                "img3",
-                "img4"
+                "https://i.ibb.co/LYz7f4S/Screenshot-from-2024-10-31-20-36-04.png",
+                "https://i.ibb.co/1b6KQ6H/Screenshot-from-2024-10-31-20-37-09.png",
+                "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png",
+                "https://i.ibb.co/qj7ZTTh/Screenshot-from-2024-10-31-20-38-57.png"
             ],
-            "correct_option": "img2",
+            "correct_option": "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png",
             "max_attempts": 2,
             "feedback": {
                 "correct": "¡Correcto! Sigamos",
