@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
-import { ModuleDetail, Home, LandingPage, Forum, NotFound, LoginRegister, Profile, LessonDetail, Dictionary } from "./pages";
+import { ModuleDetail, Home, LandingPage, Forum, NotFound, LoginRegister, Profile, LessonDetail, Dictionary , DialogueLesson} from "./pages";
 import { ProtectedRoute, NavBar } from "./components";
 import { AuthProvider } from "./contexts/AuthContext";
 
@@ -50,6 +50,11 @@ function MainApp() {
                 <Route path="/module/:idModule/lessons/:id" element={
                     <ProtectedRoute>
                         <LessonDetail />
+                    </ProtectedRoute>
+                } />
+                <Route path="/dialoguelesson" element={
+                    <ProtectedRoute>
+                        <DialogueLesson />
                     </ProtectedRoute>
                 } />
                 <Route path="/welcome" element={<LandingPage />} />

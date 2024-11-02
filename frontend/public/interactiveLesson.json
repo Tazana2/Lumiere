@@ -1,0 +1,72 @@
+{
+  "lessonId": "lesson_001",
+  "title": "Conversación en una cafetería",
+  "description": "Simulación de una conversación entre tres personas en una cafetería para practicar saludos y presentaciones.",
+  "participants": [
+    { "id": "1", "name": "Ana" },
+    { "id": "2", "name": "Luis" },
+    { "id": "3", "name": "Marta" }
+  ],
+  "content": [
+    {
+      "type": "dialogue",
+      "id": "dialogue_1",
+      "speakerId": "1",
+      "text": "_____, ¿cómo estás?"
+    },
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "title": "Selecciona la respuesta correcta",
+      "description": "",
+      "instructions": "",
+      "question": "¿Qué seña debería utilizar Ana para saludar a Luis?\n\n🙌",
+      "options": [
+          "imagen1",
+          "imagen2",
+          "imagen3",
+          "imagen4"
+      ],
+      "correct_option": "imagen2",
+      "max_attempts": 2,
+      "feedback": {
+          "correct": "¡Correcto! Sigamos",
+          "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+          "completed": "Has completado la pregunta."
+      }
+    },
+    {
+      "type": "dialogue",
+      "id": "dialogue_2",
+      "speakerId": "2",
+      "text": "Hola, Ana. Muy bien, gracias. ¿Y tú?"
+    },
+    {
+      "type": "dialogue",
+      "id": "dialogue_3",
+      "speakerId": "3",
+      "text": "Hola a ambos. ¿Puedo unirme?"
+    },
+    {
+      "type": "dialogue",
+      "id": "dialogue_4",
+      "speakerId": "1",
+      "text": "Claro, adelante. Estoy practicando una nueva señal. ¿Quieres intentarlo conmigo?"
+    },
+    {
+      "id": 2,
+      "type": "sign_detection",
+      "title": "Realiza la seña correcta",
+      "description": "Haz la seña para decir 'Hola'. Imagen de la seña: img.jpg", 
+      "instructions": "Realiza la seña para 'Hola' frente a la cámara. El sistema te indicará si es correcta.",
+      "sign_to_detect": 0,
+      "correct": "¡Bien hecho! Has realizado la seña de 'Hola' correctamente."
+    },
+    {
+      "type": "dialogue",
+      "id": "dialogue_4",
+      "speakerId": "1",
+      "text": "Claro, adelante. Estoy practicando una nueva señal. ¿Quieres intentarlo conmigo?"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+/* DialogueLesson.css */
+
+.dialogue-lesson-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.lesson-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    margin-top: 18%;
+}
+
+.dialogue-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Alinea la imagen y el diálogo al inicio */
+}
+
+.dialogue-item img {
+    max-width: 70px;
+    align-self: flex-start;
+    margin-top: 10%; /* Ajusta este margen para controlar la altura de la imagen respecto al cuadro de diálogo */
+    background: #f2f0ff;
+    padding: 2px;
+    border-radius: 20px;
+}
+
+.dialogue-item p {
+    font-size: 1.2rem;
+    padding: 20px;
+    border: 2px solid #f0f0f0;
+    border-radius: 16px;
+    border-bottom-left-radius: 0;
+    align-self: flex-start;
+    margin-left: 5px; /* Superpone el diálogo sobre la imagen */
+    margin-top: 20px; /* Ajusta la posición vertical del diálogo */
+    max-width: 40vh;
+}
+
+.dialogue-item strong {
+    color: #481285;
+    font-weight: 600;
+}
+
+.continue-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #6a38c2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.continue-button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.continue-button:focus {
+    outline: none;
+}
+
+
