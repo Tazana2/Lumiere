@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { MultipleChoiceInteractive, SignDetection } from "../components";
+import { MultipleChoiceInteractive, MultipleChoice, SignDetection, FindThePair } from "../components";
 import "../styles/DialogueLesson.css";
 
 function DialogueLesson() {
@@ -52,7 +52,7 @@ function DialogueLesson() {
         return <p>Cargando lección...</p>;
     }
 
-    const isExercise = (item) => item.type === "multiple_choice" || item.type === "sign_detection";
+    const isExercise = (item) => item.type === "multiple_choice" || item.type === "sign_detection" || item.type === "find_the_pair";
 
     return (
         <div className="dialogue-lesson-container">
@@ -85,6 +85,9 @@ function DialogueLesson() {
                     )}
                     {lesson.content[currentIndex].type === "sign_detection" && (
                         <SignDetection item={lesson.content[currentIndex]} onComplete={handleNext} />
+                    )}
+                    {lesson.content[currentIndex].type === "find_the_pair" && (
+                        <FindThePair item={lesson.content[currentIndex]} onComplete={handleNext} />
                     )}
                 </div>
             )}

@@ -1,0 +1,39 @@
+.multiple-choice-container-interactive {
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    padding: 32px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 40vh;
+    margin: 0 auto;
+  }
+  
+  .title-interactive  {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    font-variation-settings: 'wght' 400;
+    text-align: unset;
+  }
+
+  .video_multiplechoce {
+    width: 230px; /* Define el ancho que deseas */
+    height: 260px; /* Define la altura que deseas */
+    object-fit: cover; /* Llena el espacio manteniendo el video centrado */
+    overflow: hidden; /* Recorta cualquier exceso */
+    border-radius: 10%;
+}
+  
+  @media (max-width: 600px) {
+    .multiple-choice-container {
+      width: 95%;
+    }
+  
+    button {
+      width: 95%;
+    }
+  }
+  
