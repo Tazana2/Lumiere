@@ -16,7 +16,7 @@
 
 .progress-container {
   font-family: Arial, sans-serif;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 10% 20px 20px;
 }
@@ -43,7 +43,10 @@
   transition: background-color 0.3s, transform 0.3s; 
   position: relative; /* Agregar posición relativa para manejar el z-index */
   cursor: pointer;
+  display: flex;
 }
+
+
 
 .progress-card:hover {
   background-color: rgba(106, 56, 194, 0.5);
@@ -51,10 +54,10 @@
 }
 
 .progress-bar {
-  height: 12px;
+  height: 16px;
   background-color: #e0e0e0;
   border-radius: 6px;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
   overflow: hidden;
 }
 
@@ -68,7 +71,8 @@
 .progress-text {
   font-size: 18px;
   color: #333;
-  margin-bottom: 25px;
+  text-align: right;
+  margin-top: 10%;
 }
 
 /* Asegurar que los topics estén por encima de la progress-card */
@@ -145,4 +149,62 @@
   font-size: 14px;
   color: white;
   margin-top: 8px;
+}
+
+
+.progress-card-interactive {
+  display: flex;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 3vh;
+}
+
+.progress-card-interactive:hover {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.progress-image-interactive {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content-interactive {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.progress-title-interactive {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.progress-description-interactive {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 15px 0;
+}
+
+.ai-powered-interactive {
+  display: flex;
+  align-items: center;
+  background-color: #fff0e6;
+  color: #ff6600;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  width: fit-content;
+  font-weight: bold;
+}
+
+.ai-icon {
+  margin-right: 5px;
 }

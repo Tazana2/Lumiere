@@ -1,0 +1,130 @@
+Crearás una historia de la vida diaria o de situaciones cotidianas, enlazando esto con diferentes ejercicios, suministrando un JSON como  usando tu creatividad para situar los ejercicios con esos formatos y crear historias interactivas. Para que puedas crear esto mejor te dejo la siguiente información.
+
+El JSON empezará con el título de la historia "title", "description" su descripción y "participants" en "participants podrá utilizar ids del 1 hasta el 6 y podrá poner hasta 6 participantes: Ejemplo:
+
+"title": "Conversación en una cafetería",
+"description": "Simulación de una conversación entre tres personas en una cafetería para practicar saludos y presentaciones.",
+"participants": [
+    { "id": "1", "name": "Ana" },
+    { "id": "4", "name": "Luis" },
+    { "id": "3", "name": "Marta" } 
+    #Puedes poner el número de participantes que quieras con otros nombres
+],
+
+Luego de ello tendremos "content" que será la historia interactiva que crearás, todo dentro de []. Por ejemplo podrás añadir una parte de "type": "dialogue" que será un texto dicho por unos personajes.
+"content": [
+    {
+      "type": "dialogue",
+      "id": "dialogue_1",
+      "speakerId": "1",
+      "text": "¡Hola Pedro! ¿Cómo estás hoy?"
+    },
+
+A partir de esto puedes empeza a crear ejercicios para que el usuario interactúe en medio de los diálogos, ya sea diciendo como se hace una seña, o haciendo las señas correspondientes al contexto. Puedes crear ejercicios con "type":"multiple_choice" que pueden tener "description", "instructions", "option_type" que sirve si las opciones serán imágenes poniendo como valor "images", "question" y "options" En el caso de que option_type sea "images" las "options" serán rutas que están en signs/nombre.png. Las imagenes que se encuentran disponibles son signs/adios.png, signs/amor.png, signs/banar.png, signs/cumpleanos.png, signs/de_nada.png, signs/felicitar.png, signs/fumar.png, signs/hola.png, signs/hoy.png, signs/idea.png, signs/insor.png, signs/lo_siento.png . y "correct_option" en el que se pondrá la opción correcta. En caso de que las opciones son texto, entonces añade una imagen en el enunciado con agregando el parámetro "image":"signs/nombre.png" utilizando las imagenes disponibles que ya te mencioné o en caso de que quieras un video entonces pondrás "video": /nombre.mp4 y en nombre podrás escoger entre abuelo.mp4, adios.mp4, bien.mp4, buenas_noches.mp4, como_estas.mp4, feliz_dia.mp4, hermano.mp4, hija.mp4, hola.mp4. ES MUY IMPORTANTE QUE SOLO USES COMO OPCIONES LAS IMAGENES Y VIDEOS QUE TE DIJE QUE ESTÁN DISPONIBLES, TEN EN CUENTA ANTES DE GENERAR EL JSON.
+
+    Ejemplo de "option_type":"images"
+    {
+      "type": "multiple_choice",
+      "title": "Selecciona la respuesta correcta",
+      "description": "",
+      "instructions": "",
+      "option_type" : "images", #En caso de que quieras usar imagenes como opciones
+      "question": "¿Qué seña debería utilizar Ana para saludar a Luis?\n\n",
+      "options": [
+          "/signs/amor.png",
+          "/signs/hola.png",
+          "/signs/adios.png",
+          "/signs/por_favor.png"
+      ],
+      "correct_option": "/signs/hola.png",
+      "feedback": {
+          "correct": "¡Correcto! Sigamos",
+          "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+          "completed": "Has completado la pregunta."
+      }
+    }
+
+    Ejemplo de "video", cuando quieres usar videos en los enunciados
+    {
+    "id": 5,
+    "type": "multiple_choice",
+    "title": "Selecciona la seña correcta",
+    "description": "Mira la siguiente seña y selecciona a lo que corresponde",
+    "instructions": "",
+    "video": "/hola.mp4", # Puedes escoger entre abuelo.mp4, adios.mp4, bien.mp4, buenas_noches.mp4, como_estas.mp4, feliz_dia.mp4, hermano.mp4, hija.mp4, hola.mp4
+    "question": "",
+    "options": [
+        "Hola",
+        "Enojado",
+        "Adiós",
+        "Gracias"
+    ],
+    "correct_option": "Hola",
+    "max_attempts": 2,
+    "feedback": {
+        "correct": "¡Correcto! Sigamos",
+        "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+        "completed": "Has completado la pregunta."
+        }
+    }
+
+    Ejemplo de "image", cuando quieres usar imagenes en los enunciados
+    {
+      "type": "multiple_choice",
+      "title": "Selección de la señal correcta",
+      "description": "Observa la imagen y elige la señal mostrada",
+      "instructions": "Selecciona la opción correcta",
+      "question": "¿Qué señal representa esta imagen?\n\n",
+      "image": "/signs/amor.png", # Puedes escoger entre signs/adios.png, signs/amor.png, signs/banar.png, signs/cumpleanos.png, signs/de_nada.png, signs/felicitar.png, signs/fumar.png, signs/hola.png, signs/hoy.png, signs/idea.png, signs/insor.png, signs/lo_siento.png
+      "options": [
+        "amor",
+        "triste",
+        "salud",
+        "hola"
+      ],
+      "correct_option": "amor",
+      "feedback": {
+        "correct": "¡Correcto! Continuemos.",
+        "incorrect": "Respuesta incorrecta. Inténtalo de nuevo.",
+        "completed": "Has completado la pregunta."
+      }
+    }
+
+Los ejercicios de "type": "sign_detection" tendrán "title","description","instructions", "sign_to_detect" que deberá ser igual a 0,1,2 que corresponden a las señas hola, mi_nombre_es, como_estas, respectivamente. ES IMPORTANTE QUE SOLO USES ESAS y que tengan sentido con la historia.
+
+    {
+      "type": "sign_detection",
+      "title": "Realiza la seña correcta",
+      "description": "Inténtalo! Realiza la seña cómo estás: como_estas.jpg ", #Solo puedes pedir hola, mi nombre es, y como estas
+      "instructions": "",
+      "sign_to_detect": 2, # 0(hola),1(mi_nombre_es),2(como_estas) 
+      "correct": "¡Bien hecho! Has realizado la seña de 'como_estas' correctamente."
+    }
+ 
+Los ejercicios "find_the_pair" siguen la misma lógica que los anteriores y PUEDES AGREGAR ENTRE 2 y 5 PAIRS en el parámetro "pairs" con su palabra y emoji (imagen) en /signs/nombre.png" respectivamente TEN ENCUENTA SOLO LOS QUE TE DIJE QUE ESTÁN DISPONIBLES: {"word": "adios", "emoji": "/signs/adios.png"},{"word": "amor", "emoji": "/signs/amor.png"},{"word": "banar", "emoji": "/signs/banar.png"},{"word": "cumpleanos", "emoji": "/signs/cumpleanos.png"},{"word": "de_nada", "emoji": "/signs/de_nada.png"},{"word": "felicitar", "emoji": "/signs/felicitar.png"},{"word": "fumar", "emoji": "/signs/fumar.png"},{"word": "hola", "emoji": "/signs/hola.png"},{"word": "hoy", "emoji": "/signs/hoy.png"},{"word": "idea", "emoji": "/signs/idea.png"},{"word": "insor", "emoji": "/signs/insor.png"},{"word": "lo_siento", "emoji": "/signs/lo_siento.png"},{"word": "por_favor", "emoji": "/signs/por_favor.png"}
+
+    {
+      "type": "find_the_pair",
+      "title": "Encuentra las parejas",
+      "description": "Empareja las emociones con los emojis correctos.",
+      "instructions": "Selecciona una palabra y luego el emoji que la representa. Si son correctos, se emparejarán.",
+      "pairs": [
+          {
+              "word": "INSOR",
+              "emoji": "/signs/insor.png"
+          },
+          {
+              "word": "HOLA",
+              "emoji": "/signs/hola.png"
+          }
+      ],
+      "max_attempts": 3,
+      "feedback": {
+          "correct": "¡Bien hecho! Has emparejado correctamente.",
+          "incorrect": "Inténtalo de nuevo.",
+          "completed": "¡Has encontrado todas las parejas!"
+      }
+    }
+
+Recuerda que puedes añadir al JSON tantos dialogos y ejercicios de todos los tipos como quieras siempre con sentido y con las estructuras dadas. Tómate tu tiempo para crear un JSON en el que los ejercicios tengan sentido con la conversación. No crees ejercicios que no tengan que ver con el tema en el que está la conversación. Genera una conversación que TENGA más de 8 diálogos entre 5 y 7 ejercicios de cualquier tipo
+Como respuesta solo entrega el JSON.

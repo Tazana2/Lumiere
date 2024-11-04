@@ -28,12 +28,18 @@ function Module({mode, module}) {
 						<div className="progress-card clickable-card" role="button" tabIndex={0} onClick={() => {
 							navigate(`/module/${module.id}`)
 						}}>
-							<h2 className="progress-subtitle">{ module.title }</h2>
-							
-							<div className="progress-bar">
-								<div className="progress-fill" style={{ width: `${progress}%` }}></div>
+
+							<div className="left-module-part" > 
+								<h2 className="module-progress-title">{ module.title }</h2>
+								
+								<div className="progress-bar">
+									<div className="progress-fill" style={{ width: `${progress}%` }}></div>
+								</div>
+								<p className="progress-text">{ progress }% Completo</p>
 							</div>
-							<p className="progress-text">{ progress }% Completo</p>
+
+							<img src={`module-imgs/module${module.id}.png`} alt="Image" className="module-img" />
+
 						</div>
 					</>
 					

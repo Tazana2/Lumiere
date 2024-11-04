@@ -88,3 +88,19 @@
   border-radius: 10px; /* Borde más suave */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra suave para mayor profundidad */
 }
+
+.left-module-part {
+  width: 75%;
+}
+
+.module-img {
+  width: 16vh;
+  height: 16vh;
+  margin-left: 2%;
+  object-fit: cover;
+}
+
+.module-progress-title {
+  font-size: 24px; /* Aumenta el tamaño de la fuente */
+  margin-bottom: 24px; /* Ajusta el margen inferior */
+}

@@ -13,4 +13,8 @@ urlpatterns = [
 
     # Consulta del progreso del módulo
     path("api/modules/<int:module_id>/progress/", views.ModuleProgressView.as_view(), name="module_progress"),
+
+    # Enviar JSON a dialoguelesson
+    path('generate-interactive-lesson/', views.GenerateInteractiveLessonView.as_view(), name='generate_interactive_lesson'),
+
 ]

@@ -4,14 +4,12 @@ import "../styles/MultipleChoiceInteractive.css";
 
 function MultipleChoiceInteractive({ item, onComplete }) {
     const [selectedOption, setSelectedOption] = useState(null);
-    const [feedback, setFeedback] = useState("");
     const [completed, setCompleted] = useState(false);
     let description = item.description.split("&&");
 
     // Reiniciar el estado cuando cambia el ejercicio (item)
     useEffect(() => {
         setSelectedOption(null);
-        setFeedback("");
         setCompleted(false);
     }, [item]); // Dependencia en el item para reiniciar cuando se cargue un nuevo ejercicio
 
@@ -22,11 +20,9 @@ function MultipleChoiceInteractive({ item, onComplete }) {
 
     useEffect(() => {
         if (selectedOption === item.correct_option) {
-            setFeedback(item.feedback.correct);
             setCompleted(true);
         } else {
             if (selectedOption !== null) {
-                setFeedback(item.feedback.incorrect);
             }
         }
     }, [selectedOption]);
@@ -67,13 +63,21 @@ function MultipleChoiceInteractive({ item, onComplete }) {
                         ) : (
                             option
                         )
+                        }
+
+                        {
+                        option.includes("mp4") ? (
+                            <video className="video_multiplechoce" loop muted autoPlay> <source src={option} type="video/mp4" />Tu navegador no soporta la etiqueta video.</video>
+                        ) : (
+                            <div></div>
+                        )
                         }   
+
                     </button>
                     
                 ))}
             
             </div>
-            <p>{feedback}</p>
         </div>
     );
 }

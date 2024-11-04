@@ -8,12 +8,13 @@ function DialogueLesson() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [loading, setLoading] = useState(true);
     const [completedItems, setCompletedItems] = useState([]); // Para almacenar diálogos y ejercicios completados
-    const { lessonId } = useParams(); // Supongamos que tienes un parámetro de ruta para la lección
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Carga el JSON desde una ruta basada en `lessonId`
-        fetch(`/interactiveLesson.json`)
+        const controller = new AbortController();
+        const signal = controller.signal;
+    
+        fetch(`http://localhost:8000/education/generate-interactive-lesson/`, { signal })
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("No se pudo cargar la lección.");
@@ -25,10 +26,15 @@ function DialogueLesson() {
                 setLoading(false);
             })
             .catch((error) => {
-                console.error("Error cargando la lección:", error);
-                navigate("/404");
+                if (error.name !== "AbortError") {
+                    console.error("Error cargando la lección:", error);
+                    navigate("/404");
+                }
             });
-    }, [lessonId, navigate]);
+    
+        return () => controller.abort(); // Cancela el fetch si el componente se desmonta o se vuelve a renderizar
+    }, [navigate]);
+    
 
     const handleNext = () => {
         if (currentIndex < lesson.content.length - 1) { // Cambia la condición para verificar si hay más contenido
@@ -49,7 +55,10 @@ function DialogueLesson() {
     };
 
     if (loading) {
-        return <p>Cargando lección...</p>;
+        return <div id="loader">
+        <div id="box"></div>
+        <div id="hill"></div>
+      </div>;
     }
 
     const isExercise = (item) => item.type === "multiple_choice" || item.type === "sign_detection" || item.type === "find_the_pair";
