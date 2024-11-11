@@ -50,14 +50,16 @@ function ModuleDetail() {
                 {
                     lessons.length === 0 && <h2>No hay lecciones disponibles</h2>
                 }
-                {lessons.map((lesson, index) => (
-                    <div key={index} className="module-level">
-                        <span className="module-level-name">{lesson.title}</span>
-                        <button className="module-start-button" onClick={
-                            () => navigate(`/module/${idModule}/lessons/${lesson.id}`, { state: { lessonLength: lessons.length} })
-                        }>Iniciar</button>
-                    </div>
-                ))}
+                {
+                    lessons.map((lesson, index) => (
+                        <div key={index} className="module-level">
+                            <span className="module-level-name">{lesson.title}</span>
+                            <button className="module-start-button" onClick={
+                                () => navigate(`/module/${idModule}/lessons/${lesson.id}`, { state: { lessonLength: lessons.length} })
+                            }>Iniciar</button>
+                        </div>
+                    ))
+                }
             </div>
         </div>
     )

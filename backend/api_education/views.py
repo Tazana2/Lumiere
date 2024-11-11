@@ -94,8 +94,11 @@ class ModuleProgressView(APIView):
         total_lessons = models.Lesson.objects.filter(module=module).count()
         completed_lessons = models.UserProgress.objects.filter(user=user, lesson__module=module, is_completed=True).count()
 
-        progress_percentage = ceil((completed_lessons / total_lessons) * 100)
-        return Response({"progress_percentage": progress_percentage}, status=status.HTTP_200_OK)
+        if total_lessons == 0:
+            return Response({"progress_percentage": 0}, status=status.HTTP_200_OK)
+        else:
+            progress_percentage = ceil((completed_lessons / total_lessons) * 100)
+            return Response({"progress_percentage": progress_percentage}, status=status.HTTP_200_OK)
     
 
 class GenerateInteractiveLessonView(View):

@@ -29,10 +29,10 @@ function LessonDetail() {
         api.put(`/education/api/update/${id}/`, {
             completed: true,
         })
-            .catch((err) => console.log(err))
-            .finally(() => {
-                navigate("/")
-            })
+        .catch((err) => console.log(err))
+        .finally(() => {
+            navigate("/", { replace: true })
+        })
     }
 
     const handleNextExercise = () => {
