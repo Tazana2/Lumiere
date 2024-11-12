@@ -2,6 +2,12 @@ import { useState, useEffect } from "react";
 import api from "../api";
 import "../styles/Profile.css";
 import defaultAvatar from "../assets/User_pic.jpg";
+import {
+    TwitterShareButton,
+    WhatsappShareButton,
+    TwitterIcon,
+    WhatsappIcon,
+} from "react-share"
 
 export default function Profile() {
     const [user, setUser] = useState({});
@@ -53,7 +59,10 @@ export default function Profile() {
         username: user.username || "@username",
         email: user.email,
         bio: user.bio || "User bio goes here.",
-    };
+    }
+
+    const shareText = `He completado estos módulos en Lumiere: ${achievements.map(a => a.label).join(", ")}! 🎉 Aprende más aquí: `
+    const shareUrl = "http://localhost:3000/"
 
     return (
         <div className="profile-page">
@@ -83,6 +92,17 @@ export default function Profile() {
                                     </div>
                                 )) : <p>No hay módulos completados</p>
                             }
+                        </div>
+                    </section>
+                    <section className="profile-section">
+                        <h2>¡Comparte tus logros!</h2>
+                        <div style={{"display":"flex", "alignItems": "center", "justifyContent":"space-evenly"}}>
+                            <TwitterShareButton title={shareText} url={shareUrl}>
+                                <TwitterIcon size={40} round />
+                            </TwitterShareButton>
+                            <WhatsappShareButton title={shareText} url={shareUrl}>
+                                <WhatsappIcon size={40} round />
+                            </WhatsappShareButton>
                         </div>
                     </section>
                 </div>
