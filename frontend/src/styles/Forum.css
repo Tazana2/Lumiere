@@ -11,7 +11,7 @@
 
 /* Contenedor general del foro */
 .body-forum {
-    height: 100vh; /* Ocupa toda la altura de la ventana */
+    height: 100%; /* Ocupa toda la altura de la ventana */
     margin-top: 0; /* Asegúrate de que no haya margen superior */
     padding: 20px;
     max-width: 1200px;

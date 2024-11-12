@@ -1,0 +1,131 @@
+[
+    {
+        "id": 1,
+        "type": "multiple_choice",
+        "title": "Seña de 'Bien'",
+        "description": "Esta es la seña que significa 'Bien' en Lengua de Señas Colombiana, recuerdala bien para las próximas lecciones: ",
+        "instructions": "",
+        "image": "https://i.ibb.co/p3rVXfn/image.png",
+        "question": "",
+        "options": [
+            "Entendido"
+        ],
+        "correct_option": "Entendido",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 2,
+        "type": "multiple_choice",
+        "title": "Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type": "images",
+        "question": "¿Cuál es la seña de Bien en LSC?",
+        "options": [
+            "https://i.ibb.co/JtHRQjf/image.png",
+            "https://i.ibb.co/qy0yNLC/image.png",
+            "https://i.ibb.co/p3rVXfn/image.png",
+            "https://i.ibb.co/FmhmBS6/image.png"
+        ],
+        "correct_option": "https://i.ibb.co/p3rVXfn/image.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 3,
+        "type": "sign_detection",
+        "title": "Realiza la seña correcta",
+        "description": "Haz la seña para decir 'Bien'. Imagen de la seña: https://i.ibb.co/p3rVXfn/image.png", 
+        "instructions": "Realiza la seña para 'Bien' frente a la cámara. El sistema te indicará si es correcta.",
+        "sign_to_detect": 0,
+        "correct": "¡Bien hecho! Has realizado la seña de 'Bien' correctamente."
+    },
+    {
+        "id": 4,
+        "type": "multiple_choice",
+        "title": "Seña de 'Mal'",
+        "description": "Esta es la seña que significa 'Mal' en Lengua de Señas Colombiana, recuerdala bien para las próximas lecciones: ",
+        "instructions": "",
+        "image": "https://i.ibb.co/FmhmBS6/image.png",
+        "question": "",
+        "options": [
+            "Entendido"
+        ],
+        "correct_option": "Entendido",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 5,
+        "type": "multiple_choice",
+        "title": "Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type": "images",
+        "question": "¿Cuál es la seña de Mal en LSC?",
+        "options": [
+            "https://i.ibb.co/FmhmBS6/image.png",
+            "https://i.ibb.co/qy0yNLC/image.png",
+            "https://i.ibb.co/JtHRQjf/image.png",
+            "https://i.ibb.co/p3rVXfn/image.png"
+        ],
+        "correct_option": "https://i.ibb.co/FmhmBS6/image.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 6,
+        "type": "sign_detection",
+        "title": "Realiza la seña correcta",
+        "description": "Haz la seña para decir 'Mal'. Imagen de la seña: https://i.ibb.co/FmhmBS6/image.png", 
+        "instructions": "Realiza la seña para 'Mal' frente a la cámara. El sistema te indicará si es correcta.",
+        "sign_to_detect": 0,
+        "correct": "¡Bien hecho! Has realizado la seña de 'Mal' correctamente."
+    },
+    {
+        "id": 7,
+        "type": "find_the_pair",
+        "title": "Encuentra las parejas",
+        "description": "Empareja la palabras con las imágenes correctas.",
+        "instructions": "Selecciona una palabra y luego la imágen que la representa. Si son correctos, se emparejarán.",
+        "pairs": [
+            {
+                "word": "BIEN",
+                "emoji": "https://i.ibb.co/p3rVXfn/image.png"
+            },
+            {
+                "word": "MAL",
+                "emoji": "https://i.ibb.co/FmhmBS6/image.png"
+            },
+            {
+                "word": "HOLA",
+                "emoji": "https://i.ibb.co/bdGh2gK/Screenshot-from-2024-11-01-16-24-54.png"
+            },
+            {
+                "word": "ADIÓS",
+                "emoji": "https://i.ibb.co/s37mVJS/image.png"
+            }
+        ],
+        "max_attempts": 3,
+        "feedback": {
+            "correct": "¡Bien hecho! Has emparejado correctamente.",
+            "incorrect": "Inténtalo de nuevo.",
+            "completed": "¡Has encontrado todas las parejas!"
+        }
+    }
+]

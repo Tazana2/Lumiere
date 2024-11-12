@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "type": "multiple_choice",
+        "title": "Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type": "images",
+        "question": "¿Cuál es la seña de Hola en LSC?",
+        "options": [
+            "https://i.ibb.co/FmhmBS6/image.png",
+            "https://i.ibb.co/p3rVXfn/image.png",
+            "https://i.ibb.co/LYz7f4S/Screenshot-from-2024-10-31-20-36-04.png",
+            "https://i.ibb.co/s37mVJS/image.png"
+        ],
+        "correct_option": "https://i.ibb.co/LYz7f4S/Screenshot-from-2024-10-31-20-36-04.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 2,
+        "type": "sign_detection",
+        "title": "Realiza la seña correcta",
+        "description": "Haz la seña para decir 'Hola'. Imagen de la seña: https://i.ibb.co/LYz7f4S/Screenshot-from-2024-10-31-20-36-04.png", 
+        "instructions": "Realiza la seña para 'Hola' frente a la cámara. El sistema te indicará si es correcta.",
+        "sign_to_detect": 0,
+        "correct": "¡Bien hecho! Has realizado la seña de 'Hola' correctamente."
+    },
+    {
+        "id": 3,
+        "type": "sign_detection",
+        "title": "Realiza la seña correcta",
+        "description": "Haz la seña para decir '¿Cómo estás?'. Imagen de la seña: https://i.ibb.co/cxrhFqg/desktop-94a2870f-8869-41c9-9107-b840b840414b.jpg", 
+        "instructions": "Realiza la seña para '¿Cómo estás?' frente a la cámara. El sistema te indicará si es correcta.",
+        "sign_to_detect": 0,
+        "correct": "¡Bien hecho! Has realizado la seña de '¿Cómo estás?' correctamente."
+    },
+    {
+        "id": 4,
+        "type": "multiple_choice",
+        "title": "Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type": "images",
+        "question": "¿Cuál es la seña del Adiós en LSC?",
+        "options": [
+            "https://i.ibb.co/1b6KQ6H/Screenshot-from-2024-10-31-20-37-09.png",
+            "https://i.ibb.co/FmhmBS6/image.png",
+            "https://i.ibb.co/QQLFhv9/image.png",
+            "https://i.ibb.co/s37mVJS/image.png"
+        ],
+        "correct_option": "https://i.ibb.co/s37mVJS/image.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 5,
+        "type": "multiple_choice",
+        "title": "Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type": "images",
+        "question": "¿Cuál es la seña del Por favor en LSC?",
+        "options": [
+            "https://i.ibb.co/MZV5FSy/image.png",
+            "https://i.ibb.co/FmhmBS6/image.png",
+            "https://i.ibb.co/YZfXTgS/image.png",
+            "https://i.ibb.co/p3rVXfn/image.png"
+        ],
+        "correct_option": "https://i.ibb.co/YZfXTgS/image.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 6,
+        "type": "sign_detection",
+        "title": "Realiza la seña correcta",
+        "description": "Haz la seña para decir 'Por favor'. Imagen de la seña: https://i.ibb.co/YZfXTgS/image.png", 
+        "instructions": "Realiza la seña para 'Por favor' frente a la cámara. El sistema te indicará si es correcta.",
+        "sign_to_detect": 0,
+        "correct": "¡Bien hecho! Has realizado la seña de 'Por favor' correctamente."
+    }
+]
