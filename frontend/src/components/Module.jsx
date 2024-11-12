@@ -22,7 +22,6 @@ function Module({ first, module, prev_module }) {
 				.then((data) => {
 					if (data.progress_percentage === 100) {
 						setLocked(false)
-						console.log("Unlocked")
 					}
 				})
 				.catch((err) => console.log(err))
