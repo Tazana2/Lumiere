@@ -109,8 +109,8 @@ function DialogueLesson() {
             {/* Si es el último elemento, muestra los botones de reiniciar y salir */}
             {currentIndex === lesson.content.length - 1 && (
                 <div className="end-buttons">
-                    <button onClick={handleRestart} className="restart-button">Reiniciar</button>
-                    <button onClick={handleExit} className="exit-button">Salir</button>
+                    <button onClick={handleRestart} className="btn">Reiniciar</button>
+                    <button onClick={handleExit} className="btn">Salir</button>
                 </div>
             )}
         </div>

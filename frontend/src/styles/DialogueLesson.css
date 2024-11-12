@@ -69,6 +69,13 @@
 .continue-button:focus {
     outline: none;
 }
+
+.end-buttons {
+  display: flex;
+  gap: 20px;
+  padding-top: 30px;
+}
+
 /* loader animation */
 #loader {
     position: absolute;
