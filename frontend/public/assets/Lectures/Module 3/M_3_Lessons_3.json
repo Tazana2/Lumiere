@@ -73,14 +73,5 @@
             "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
             "completed": "Has completado la pregunta."
         }
-    },
-    {
-        "id": 5,
-        "type": "sign_detection",
-        "title": "Pregunta 5",
-        "description": "Haz la seña para decir 'Por favor'.", 
-        "instructions": "Realiza la seña para 'Por favor' frente a la cámara. El sistema te indicará si es correcta.",
-        "sign_to_detect": 6,
-        "correct": "¡Bien hecho! Has realizado la seña de 'Por favor' correctamente."
     }
 ]

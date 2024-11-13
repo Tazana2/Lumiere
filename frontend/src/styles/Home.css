@@ -127,6 +127,7 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
+  margin-top: 20px;
 }
 
 .up-next-item:hover {

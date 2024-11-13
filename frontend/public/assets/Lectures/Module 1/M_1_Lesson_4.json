@@ -2,6 +2,25 @@
     {
         "id": 1,
         "type": "multiple_choice",
+        "title": "Seña de 'Hermano'",
+        "description": "Esta es la seña que significa 'Hermano' en Lengua de Señas Colombiana, recuerdala bien para las próximas lecciones: ",
+        "instructions": "",
+        "video": "/hermano.mp4",
+        "question": "",
+        "options": [
+            "Entendido"
+        ],
+        "correct_option": "Entendido",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 2,
+        "type": "multiple_choice",
         "title": "Pregunta 1",
         "description":"Selecciona la respuesta correcta",
         "instructions": "",
@@ -22,20 +41,20 @@
         }
     },
     {
-        "id": 2,
+        "id": 3,
         "type": "multiple_choice",
         "title": "Pregunta 2",
         "description": "Observa el video a continuación. ¿Qué significa la seña que ves?",
         "instructions": "",
-        "video": "/mi_nombre_es.mp4",
+        "video": "/buenas_tardes.mp4",
         "question": "",
         "options": [
             "Abuela",
-            "Bien",
+            "Buenas tardes",
             "Mi nombre es",
             "Mal"
         ],
-        "correct_option": "Mi nombre es",
+        "correct_option": "Buenas tardes",
         "max_attempts": 2,
         "feedback": {
             "correct": "¡Correcto! Sigamos",
@@ -44,7 +63,7 @@
         }
     },
     {
-        "id": 3,
+        "id": 4,
         "type": "find_the_pair",
         "title": "Pregunta 3",
         "description": "Empareja la palabras con las imágenes correctas.",
@@ -75,18 +94,40 @@
         }
     },
     {
-        "id": 4,
-        "type": "sign_detection",
+        "id": 5,
+        "type": "multiple_choice",
         "title": "Pregunta 4",
+        "description":"Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type" : "images",
+        "question": "¿Cuál es la seña de Hermano en LSC?",
+        "options": [
+            "https://i.ibb.co/N9C7ncK/image.png",
+            "https://i.ibb.co/JtHRQjf/image.png",
+            "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png",
+            "https://i.ibb.co/qj7ZTTh/Screenshot-from-2024-10-31-20-38-57.png"
+        ],
+        "correct_option": "https://i.ibb.co/N9C7ncK/image.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 6,
+        "type": "sign_detection",
+        "title": "Pregunta 5",
         "description": "Haz la seña para decir 'Adiós'.", 
         "instructions": "Realiza la seña para 'Adiós' frente a la cámara. El sistema te indicará si es correcta.",
         "sign_to_detect": 3,
         "correct": "¡Bien hecho! Has realizado la seña de 'Adiós' correctamente."
     },
     {
-        "id": 5,
+        "id": 7,
         "type": "multiple_choice",
-        "title": "Pregunta 5",
+        "title": "Pregunta 6",
         "description":"Selecciona la respuesta correcta",
         "instructions": "",
         "option_type" : "images",
@@ -106,9 +147,9 @@
         }
     },
     {
-        "id": 6,
+        "id": 8,
         "type": "multiple_choice",
-        "title": "Pregunta 6",
+        "title": "Pregunta 7",
         "description":"Selecciona la respuesta correcta",
         "instructions": "",
         "option_type": "images",
@@ -128,9 +169,9 @@
         }
     },
     {
-        "id": 7,
+        "id": 9,
         "type": "find_the_pair",
-        "title": "Pregunta 7",
+        "title": "Pregunta 8",
         "description": "Empareja la palabras con las imágenes correctas.",
         "instructions": "Selecciona una palabra y luego la imágen que la representa. Si son correctos, se emparejarán.",
         "pairs": [

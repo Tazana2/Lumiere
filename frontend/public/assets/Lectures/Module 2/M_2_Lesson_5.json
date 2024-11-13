@@ -98,15 +98,6 @@
     },
     {
         "id": 6,
-        "type": "sign_detection",
-        "title": "Pregunta 6",
-        "description": "Haz la seña para decir 'Buenas noches'.", 
-        "instructions": "Realiza la seña para 'Buenas noches' frente a la cámara. El sistema te indicará si es correcta.",
-        "sign_to_detect": 4,
-        "correct": "¡Bien hecho! Has realizado la seña de 'Buenas noches' correctamente."
-    },
-    {
-        "id": 7,
         "type": "find_the_pair",
         "title": "Pregunta 7",
         "description": "Empareja la palabras con las imágenes correctas.",

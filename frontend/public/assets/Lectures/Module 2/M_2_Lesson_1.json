@@ -69,8 +69,8 @@
         "question": "¿Cuál es la seña de Mal en LSC?",
         "options": [
             "https://i.ibb.co/FmhmBS6/image.png",
-            "https://i.ibb.co/qy0yNLC/image.png",
-            "https://i.ibb.co/JtHRQjf/image.png",
+            "https://i.ibb.co/LZYb1Zr/image.png",
+            "https://i.ibb.co/LZYb1Zr/image.png",
             "https://i.ibb.co/p3rVXfn/image.png"
         ],
         "correct_option": "https://i.ibb.co/FmhmBS6/image.png",
@@ -101,8 +101,8 @@
                 "emoji": "https://i.ibb.co/bdGh2gK/Screenshot-from-2024-11-01-16-24-54.png"
             },
             {
-                "word": "ADIÓS",
-                "emoji": "https://i.ibb.co/s37mVJS/image.png"
+                "word": "BUENAS NOCHES",
+                "emoji": "https://i.ibb.co/LZYb1Zr/image.png"
             }
         ],
         "max_attempts": 3,
