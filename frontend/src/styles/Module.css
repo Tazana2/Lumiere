@@ -60,6 +60,7 @@
 }
 
 .module-level-name {
+  width: 300px;
   font-weight: bold;
   font-size: 18px; /* Aumenta el tamaño de la fuente */
 }
@@ -68,12 +69,16 @@
   background-color: #fff;
   color: #374151;
   border: 1px solid #d1d5db;
-  border-radius: 25px; /* Incrementa el radio para hacerlo más redondeado */
-  padding: 8px 20px; /* Aumenta el tamaño del botón */
-  font-size: 16px; /* Aumenta el tamaño de la fuente */
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Añade una animación suave */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  display: inline-flex; /* Permite que el botón se ajuste al contenido */
+  align-items: center; /* Centra el texto verticalmente */
+  justify-content: center; /* Centra el texto horizontalmente */
 }
+
 
 .module-start-button:hover {
   background-color: #e0e7ff; /* Color más visible al pasar el cursor */

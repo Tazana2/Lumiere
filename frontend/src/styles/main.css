@@ -99,14 +99,6 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-nav {
-    position: fixed;
-    isolation: isolate;
-    width: 100%;
-    margin-inline: auto;
-    z-index: 9;
-}
-
 @media (width > 540px) {
     .steps-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -118,66 +110,6 @@ nav {
 
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (width > 768px) {
-    nav {
-        padding: 1.5rem 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-        width: 80%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #ffffff;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        
-    }
-
-    .nav-header {
-        padding: 0;
-        background-color: transparent;
-        margin-left: 15px;
-    }
-
-    .nav-menu-btn {
-        display: none;
-        margin-top: 10px;
-    }
-
-    .nav-links {
-        position: static;
-        padding: 0;
-        flex-direction: row;
-        justify-content: flex-end;
-        background-color: transparent;
-        transform: none;
-        margin-right: 15px;
-    }
-
-    .steps-grid {
-        margin-top: 6rem;
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .steps-card:nth-child(2n - 1) {
-        transform: translateY(-2rem);
-    }
-
-    .explore-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .footer-container {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .footer-col:nth-child(1) {
-        grid-column: 1/3;
     }
 }
 

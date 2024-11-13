@@ -96,14 +96,15 @@ export default function Profile() {
                     </section>
                     <section className="profile-section">
                         <h2>¡Comparte tus logros!</h2>
-                        <div style={{"display":"flex", "alignItems": "center", "justifyContent":"space-evenly"}}>
+                        <div className="share-buttons-container">
                             <TwitterShareButton title={shareText} url={shareUrl}>
-                                <TwitterIcon size={40} round />
+                                <TwitterIcon size={50} round />
                             </TwitterShareButton>
                             <WhatsappShareButton title={shareText} url={shareUrl}>
-                                <WhatsappIcon size={40} round />
+                                <WhatsappIcon size={50} round />
                             </WhatsappShareButton>
                         </div>
+
                     </section>
                 </div>
             </div>
