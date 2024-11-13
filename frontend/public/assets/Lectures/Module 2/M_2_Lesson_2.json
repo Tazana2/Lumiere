@@ -21,16 +21,17 @@
     {
         "id": 2,
         "type": "sign_detection",
-        "title": "Realiza la seña correcta",
-        "description": "Haz la seña para decir 'Por favor'. Imagen de la seña: https://i.ibb.co/YZfXTgS/image.png", 
+        "title": "Pregunta 1",
+        "description": "Haz la seña para decir 'Por favor'.", 
         "instructions": "Realiza la seña para 'Por favor' frente a la cámara. El sistema te indicará si es correcta.",
-        "sign_to_detect": 0,
+        "sign_to_detect": 6,
         "correct": "¡Bien hecho! Has realizado la seña de 'Por favor' correctamente."
     },
     {
         "id": 3,
         "type": "multiple_choice",
-        "title": "Selecciona la respuesta correcta",
+        "title": "Pregunta 2",
+        "description":"Selecciona la respuesta correcta",
         "instructions": "",
         "option_type": "images",
         "question": "¿Cuál es la seña de Bien en LSC?",
@@ -51,7 +52,7 @@
     {
         "id": 4,
         "type": "find_the_pair",
-        "title": "Encuentra las parejas",
+        "title": "Pregunta 3",
         "description": "Empareja la palabras con las imágenes correctas.",
         "instructions": "Selecciona una palabra y luego la imágen que la representa. Si son correctos, se emparejarán.",
         "pairs": [
@@ -78,7 +79,8 @@
     {
         "id": 5,
         "type": "multiple_choice",
-        "title": "Selecciona la respuesta correcta",
+        "title": "Pregunta 4",
+        "description":"Selecciona la respuesta correcta",
         "instructions": "",
         "option_type": "images",
         "question": "¿Cuál es la seña de Hola en LSC?",
@@ -99,7 +101,7 @@
     {
         "id": 6,
         "type": "multiple_choice",
-        "title": "Selecciona la seña correcta",
+        "title": "Pregunta 5",
         "description": "Observa el video a continuación. ¿Qué significa la seña que ves?",
         "instructions": "",
         "video": "/mi_nombre_es.mp4",
@@ -121,10 +123,10 @@
     {
         "id": 7,
         "type": "sign_detection",
-        "title": "Realiza la seña correcta",
-        "description": "Haz la seña para decir 'Mi nombre es'. Imagen de la seña: https://i.ibb.co/qrxKQfJ/Dise-o-sin-t-tulo.png", 
+        "title": "Pregunta 6",
+        "description": "Haz la seña para decir 'Mi nombre es'.", 
         "instructions": "Realiza la seña para 'Mi nombre es' frente a la cámara. El sistema te indicará si es correcta.",
-        "sign_to_detect": 0,
+        "sign_to_detect": 1,
         "correct": "¡Bien hecho! Has realizado la seña de 'Mi nombre es' correctamente."
     }
 ]

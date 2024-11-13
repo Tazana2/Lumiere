@@ -21,7 +21,8 @@
     {
         "id": 2,
         "type": "multiple_choice",
-        "title": "Selecciona la respuesta correcta",
+        "title": "Pregunta 1",
+        "description":"Selecciona la respuesta correcta",
         "instructions": "",
         "option_type": "images",
         "question": "¿Cuál es la seña de Bien en LSC?",
@@ -41,15 +42,6 @@
     },
     {
         "id": 3,
-        "type": "sign_detection",
-        "title": "Realiza la seña correcta",
-        "description": "Haz la seña para decir 'Bien'. Imagen de la seña: https://i.ibb.co/p3rVXfn/image.png", 
-        "instructions": "Realiza la seña para 'Bien' frente a la cámara. El sistema te indicará si es correcta.",
-        "sign_to_detect": 0,
-        "correct": "¡Bien hecho! Has realizado la seña de 'Bien' correctamente."
-    },
-    {
-        "id": 4,
         "type": "multiple_choice",
         "title": "Seña de 'Mal'",
         "description": "Esta es la seña que significa 'Mal' en Lengua de Señas Colombiana, recuerdala bien para las próximas lecciones: ",
@@ -68,9 +60,10 @@
         }
     },
     {
-        "id": 5,
+        "id": 4,
         "type": "multiple_choice",
-        "title": "Selecciona la respuesta correcta",
+        "title": "Pregunta 2",
+        "description":"Selecciona la respuesta correcta",
         "instructions": "",
         "option_type": "images",
         "question": "¿Cuál es la seña de Mal en LSC?",
@@ -89,18 +82,9 @@
         }
     },
     {
-        "id": 6,
-        "type": "sign_detection",
-        "title": "Realiza la seña correcta",
-        "description": "Haz la seña para decir 'Mal'. Imagen de la seña: https://i.ibb.co/FmhmBS6/image.png", 
-        "instructions": "Realiza la seña para 'Mal' frente a la cámara. El sistema te indicará si es correcta.",
-        "sign_to_detect": 0,
-        "correct": "¡Bien hecho! Has realizado la seña de 'Mal' correctamente."
-    },
-    {
-        "id": 7,
+        "id": 5,
         "type": "find_the_pair",
-        "title": "Encuentra las parejas",
+        "title": "Pregunta 3",
         "description": "Empareja la palabras con las imágenes correctas.",
         "instructions": "Selecciona una palabra y luego la imágen que la representa. Si son correctos, se emparejarán.",
         "pairs": [

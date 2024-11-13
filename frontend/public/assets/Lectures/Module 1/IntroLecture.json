@@ -121,7 +121,7 @@
             "id": 7,
             "type": "sign_detection",
             "title": "Realiza la seña correcta",
-            "description": "Haz la seña para decir 'Hola'. Imagen de la seña: img.jpg", 
+            "description": "Haz la seña para decir 'Hola'", 
             "instructions": "Realiza la seña para 'Hola' frente a la cámara. El sistema te indicará si es correcta.",
             "sign_to_detect": 0,
             "correct": "¡Bien hecho! Has realizado la seña de 'Hola' correctamente."
