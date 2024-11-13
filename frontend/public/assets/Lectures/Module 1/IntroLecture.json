@@ -119,6 +119,23 @@
         },
         {
             "id": 7,
+            "type": "multiple_choice",
+            "title": "Introducción al sistema de reconocimiento de señas",
+            "description": "En algunos ejercicios te encontrarás con el sistema de reconocimiento de señas, en el cual deberás realizar una seña frente a la cámara para que el sistema la detecte. Este sistema te permitirá practicar la LSC de una manera más interactiva y dinámica. A continuación te mostramos como funciona: && 1. Se te mostrará una seña que deberás realizar frente a la cámara. &&2. El sistema detectará la seña y te indicará si es correcta, deberas acomodarte manera que se vea tu torso: ",
+            "instructions": "",
+            "image": "https://i.ibb.co/ThN59qq/Screenshot-from-2024-10-31-17-22-43.png",
+            "question": "3. ¡Diviértete aprendiendo!",
+            "options": [
+                "¡Entendido!, continuar"
+            ],
+            "correct_option": "¡Entendido!, continuar",
+            "max_attempts": 2,
+            "feedback": {
+                "correct": "¡Correcto! Sigamos"
+            }
+        },
+        {
+            "id": 8,
             "type": "sign_detection",
             "title": "Realiza la seña correcta",
             "description": "Haz la seña para decir 'Hola'", 
@@ -127,7 +144,7 @@
             "correct": "¡Bien hecho! Has realizado la seña de 'Hola' correctamente."
         },
         {
-            "id": 8,
+            "id": 9,
             "type": "find_the_pair",
             "title": "Encuentra las parejas",
             "description": "Empareja las emociones con los emojis correctos.",
