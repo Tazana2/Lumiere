@@ -36,7 +36,7 @@ def video_feed(request):
     # Inicialización de MediaPipe y carga del modelo
     mp_holistic = mp.solutions.holistic
     mp_drawing = mp.solutions.drawing_utils
-    actions = np.array(['hola', 'mi_nombre_es', 'como_estas'])
+    actions = np.array(['hola', 'mi_nombre_es', 'como_estas','chao','buenas_noches', 'INSOR', 'por_favor', 'parado'])
 
     # Cargar el modelo
     def load_model():
@@ -50,7 +50,7 @@ def video_feed(request):
         model.compile(optimizer="Adam", loss="categorical_crossentropy", metrics=["categorical_accuracy"])
 
         # Cargar los pesos desde el archivo action.h5 en la misma carpeta que views.py
-        weights_path = os.path.join(os.path.dirname(__file__), 'action.h5')
+        weights_path = os.path.join(os.path.dirname(__file__), 'tryfewer.h5')
         model.load_weights(weights_path)
 
         return model
@@ -122,7 +122,7 @@ def video_feed(request):
         return output_frame
 
     # Colores para cada acción
-    colors = [(245, 117, 16), (117, 245, 16), (16, 117, 245)]
+    colors = [(245, 117, 16), (117, 245, 16), (16, 117, 245), (16, 245, 117), (117, 16, 245), (245, 16, 117), (245, 16, 117), (16, 245, 117)]
 
     def gen_frames():
         global cap
