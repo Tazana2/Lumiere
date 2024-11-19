@@ -1,0 +1,47 @@
+.exercise-container {
+    padding-top: 1rem; 
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .pair-exercises-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pair-exercises-container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .pair-exercises-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .pair-exercises-container.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .lesson-header {
+    display: flex; /* Utilizar flexbox para alinear los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+    margin-bottom: 1%; /* Espacio debajo del contenedor */
+}
+
+  .lesson-title-card {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de la tarjeta */
+    margin-left: 20px; /* Espacio entre el botón y la tarjeta */
+    text-align: left; /* Alinear el texto a la izquierda */
+    display: inline-block; /* Hacer que la tarjeta ajuste su tamaño al contenido */
+    max-width: 80%; /* Limitar el ancho máximo (ajusta según sea necesario) */
+    line-height: 1.5; /* Espaciado entre líneas para mejorar la legibilidad */
+  }

@@ -1,0 +1,174 @@
+[
+    {
+        "id": 1,
+        "type": "multiple_choice",
+        "title": "Pregunta 1",
+        "description": "Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type": "images",
+        "question": "¿Cuál es la seña del Adiós en LSC?",
+        "options": [
+            "https://i.ibb.co/FmhmBS6/image.png",
+            "https://i.ibb.co/qy0yNLC/image.png",
+            "https://i.ibb.co/1b6KQ6H/Screenshot-from-2024-10-31-20-37-09.png",
+            "https://i.ibb.co/s37mVJS/image.png"
+        ],
+        "correct_option": "https://i.ibb.co/s37mVJS/image.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 2,
+        "type": "multiple_choice",
+        "title": "Pregunta 2",
+        "description": "Selecciona la respuesta correcta",
+        "instructions": "Observa el siguiente video y selecciona la palabra que represente la seña",
+        "video": "/mi_nombre_es.mp4",
+        "question": "",
+        "options": [
+            "Mi nombre es",
+            "Ayer",
+            "¿Cómo te llamas?",
+            "Mal"
+        ],
+        "correct_option": "Mi nombre es",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 3,
+        "type": "multiple_choice",
+        "title": "Pregunta 3",
+        "description": "Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type": "images",
+        "question": "¿Cuál es la seña de Hola en LSC?",
+        "options": [
+            "https://i.ibb.co/qy0yNLC/image.png",
+            "https://i.ibb.co/p3rVXfn/image.png",
+            "https://i.ibb.co/JtHRQjf/image.png",
+            "https://i.ibb.co/LYz7f4S/Screenshot-from-2024-10-31-20-36-04.png"
+        ],
+        "correct_option": "https://i.ibb.co/LYz7f4S/Screenshot-from-2024-10-31-20-36-04.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 4,
+        "type": "multiple_choice",
+        "title": "Pregunta 4",
+        "description": "Observa el video a continuación. ¿Qué significa la seña que ves?",
+        "instructions": "",
+        "video": "/adios.mp4",
+        "question": "",
+        "options": [
+            "Adiós",
+            "Buenas noches",
+            "Por favor",
+            "Bien"
+        ],
+        "correct_option": "Adiós",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 5,
+        "type": "sign_detection",
+        "title": "Pregunta 5",
+        "description": "Haz la seña para decir 'Adiós'.", 
+        "instructions": "Realiza la seña para 'Adiós' frente a la cámara. El sistema te indicará si es correcta.",
+        "sign_to_detect": 3,
+        "correct": "¡Bien hecho! Has realizado la seña de 'Adiós' correctamente."
+    },
+    {
+        "id": 6,
+        "type": "multiple_choice",
+        "title": "Pregunta 6",
+        "description": "Observa el video a continuación. ¿Qué significa la seña que ves?",
+        "instructions": "",
+        "video": "/mal.mp4",
+        "question": "",
+        "options": [
+            "Bien",
+            "Mal",
+            "Mañana",
+            "Adiós"
+        ],
+        "correct_option": "Mal",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 7,
+        "type": "multiple_choice",
+        "title": "Pregunta 7",
+        "description": "Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type": "images",
+        "question": "¿Cuál es la seña de 'Mi nombre es' en LSC?",
+        "options": [
+            "https://i.ibb.co/p3rVXfn/image.png",
+            "https://i.ibb.co/1b6KQ6H/Screenshot-from-2024-10-31-20-37-09.png",
+            "https://i.ibb.co/qy0yNLC/image.png",
+            "https://i.ibb.co/qrxKQfJ/Dise-o-sin-t-tulo.png"
+        ],
+        "correct_option": "https://i.ibb.co/qrxKQfJ/Dise-o-sin-t-tulo.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 8,
+        "type": "find_the_pair",
+        "title": "Pregunta 8",
+        "description": "Empareja la palabras con las imágenes correctas.",
+        "instructions": "Selecciona una palabra y luego la imágen que la representa. Si son correctos, se emparejarán.",
+        "pairs": [
+            {
+                "word": "HOLA",
+                "emoji": "https://i.ibb.co/bdGh2gK/Screenshot-from-2024-11-01-16-24-54.png"
+            },
+            {
+                "word": "INSOR",
+                "emoji": "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png"
+            },
+            {
+                "word": "MI NOMBRE ES",
+                "emoji": "https://i.ibb.co/qrxKQfJ/Dise-o-sin-t-tulo.png"
+            },
+            {
+                "word": "ADIÓS",
+                "emoji": "https://i.ibb.co/s37mVJS/image.png"
+            }
+        ],
+        "max_attempts": 3,
+        "feedback": {
+            "correct": "¡Bien hecho! Has emparejado correctamente.",
+            "incorrect": "Inténtalo de nuevo.",
+            "completed": "¡Has encontrado todas las parejas!"
+        }
+    }
+]

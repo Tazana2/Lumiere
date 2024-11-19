@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+
+.hero-section {
+    --background-dark: #2d3548;
+    --text-light: rgba(255, 255, 255, 0.6);
+    --text-lighter: rgba(255, 255, 255, 0.9);
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 0px;
+    --width-container: 1200px;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: flex-start;
+    background-image: linear-gradient(15deg, #ffffff 0%, #ffffff 150%);
+    display: flex;
+    min-height: 100vh; /* Cambiado de 100% a 100vh para asegurar que ocupe toda la altura de la ventana */
+    justify-content: center;
+    padding: var(--spacing-xxl) var(--spacing-l);
+    padding-top: 42px;
+}
+
+
+
+.title-dictionary {
+  --spacing-l: 24px;
+  --spacing-xxl: 9%;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 24px;
+
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media (min-width: 540px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  list-style: none;
+  position: relative;
+  display: block; /* Asegura que los enlaces se comporten correctamente */
+  text-decoration: none; /* Elimina la subrayado de los enlaces */
+}
+
+.card:before {
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0); /* Corregido "trsnsform" a "transform" */
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.card:hover .card__background {
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background {
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content {
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+  width: 100%; /* Asegura que el contenido ocupe todo el ancho de la tarjeta */
+  height: 100%; /* Asegura que el contenido ocupe toda la altura de la tarjeta */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Posiciona el contenido al fondo de la tarjeta */
+  border-radius: var(--spacing-l);
+}
+
+.card__category {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading {
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  word-spacing: 100vw; /* Revisa si realmente necesitas este valor, puede causar que el texto se desborde */
+}
+
+.card {
+    list-style: none;
+    position: relative;
+  }
+  
+  .card:before {
+    content: '';
+    display: block;
+    padding-bottom: 150%; /* Mantiene la relación de aspecto de la tarjeta */
+    width: 100%;
+  }
+  
+  .card__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: var(--spacing-l);
+  }
+  
+  .card__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Para que el video no interfiera con los clics */
+    filter: brightness(0.75) saturate(1.2) contrast(0.85); /* Estilo inicial */
+    transition: filter 200ms linear, transform 200ms linear;
+    transform: scale(1) translateZ(0);
+  }
+  
+  .card:hover .card__video {
+    filter: brightness(1) saturate(1.5) contrast(1);
+    transform: scale(1.05) translateZ(0);
+  }
+  
+  .card__content {
+    left: 0;
+    padding: var(--spacing-l);
+    position: absolute;
+    top: 0;
+    z-index: 2; /* Asegura que el contenido esté por encima del video */
+  }
+  
+  .card__category {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-s);
+    text-transform: uppercase;
+  }
+  
+  .card__heading {
+    color: var(--text-lighter);
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+    word-spacing: 100vw;
+  }
+  
+  .search-bar-dictionary-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-bottom: 36px; /* Espacio debajo de la barra */
+  }
+  
+  .search-bar-dictionary {
+    width: 50%; /* Ajusta el ancho de la barra de búsqueda */
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+  }
+  

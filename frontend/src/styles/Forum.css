@@ -1,0 +1,117 @@
+/* Tarjeta del header */
+.forum-header-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 120px;
+}
+
+/* Contenedor general del foro */
+.body-forum {
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    margin-top: 0; /* Asegúrate de que no haya margen superior */
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f5f5f0;
+    display: flex;
+    flex-direction: column; /* Permite que los hijos se apilen verticalmente */
+}
+
+.forum-header-title {
+    font-size: 3rem;
+    color: #333;
+}
+
+.forum-header-subtitle {
+    font-size: 1.8rem;
+    color: #555;
+}
+
+/* Contenedor para la sección de crear post y los posts */
+.forum-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Tarjeta para el formulario de crear post */
+.forum-create-post {
+    flex-basis: 30%;
+    max-height: 350px; /* Altura máxima para limitar el tamaño */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Permitir desplazamiento si el contenido es demasiado grande */
+}
+
+
+.forum-label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Campo de entrada para el título */
+.forum-input {
+    width: 100%; /* Ancho completo */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    /* Opcional: puedes ajustar la altura si deseas */
+    height: 40px; /* Altura fija para el título */
+}
+
+/* Área de texto para el contenido del post */
+.forum-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: none; /* Desactivar el redimensionamiento manual */
+    overflow: auto; /* Permitir que crezca automáticamente */
+    min-height: 100px; /* Altura mínima */
+}
+
+.forum-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #6a38c2; /* Color normal */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.forum-btn:hover {
+    background-color: #6132b4; /* Color al pasar el mouse */
+}
+
+/* Tarjetas para los posts */
+.forum-posts {
+    flex-basis: 65%;
+}
+
+.forum-post-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .forum-content {
+        display: grid;
+    }
+}

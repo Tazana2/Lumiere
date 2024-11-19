@@ -1,0 +1,108 @@
+[
+    {
+        "id": 1,
+        "type": "multiple_choice",
+        "title": "Pregunta 1",
+        "description": "Observa el video a continuación. ¿Qué significa la seña que ves?",
+        "instructions": "",
+        "video": "/mi_nombre_es.mp4",
+        "question": "",
+        "options": [
+            "¿Dónde vives?",
+            "Mi nombre es",
+            "Hoy",
+            "¿Cómo te llamas?"
+        ],
+        "correct_option": "Mi nombre es",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 2,
+        "type": "sign_detection",
+        "title": "Pregunta 2",
+        "description": "Haz la seña para decir 'Mi nombre es'.", 
+        "instructions": "Realiza la seña para 'Mi nombre es' frente a la cámara. El sistema te indicará si es correcta.",
+        "sign_to_detect": 1,
+        "correct": "¡Bien hecho! Has realizado la seña de 'Mi nombre es' correctamente."
+    },
+    {
+        "id": 3,
+        "type": "multiple_choice",
+        "title": "Pregunta 3",
+        "description":"Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type" : "images",
+        "question": "¿Cuál es la seña del INSOR en LSC?",
+        "options": [
+            "https://i.ibb.co/s37mVJS/image.png",
+            "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png",
+            "https://i.ibb.co/YZfXTgS/image.png",
+            "https://i.ibb.co/MZV5FSy/image.png"
+        ],
+        "correct_option": "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 4,
+        "type": "multiple_choice",
+        "title": "Pregunta 4",
+        "description":"Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type": "images",
+        "question": "¿Cuál es la seña de Bien en LSC?",
+        "options": [
+            "https://i.ibb.co/p3rVXfn/image.png",
+            "https://i.ibb.co/JtHRQjf/image.png",
+            "https://i.ibb.co/YZfXTgS/image.png",
+            "https://i.ibb.co/FmhmBS6/image.png"
+        ],
+        "correct_option": "https://i.ibb.co/p3rVXfn/image.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 5,
+        "type": "find_the_pair",
+        "title": "Pregunta 5",
+        "description": "Empareja la palabras con las imágenes correctas.",
+        "instructions": "Selecciona una palabra y luego la imágen que la representa. Si son correctos, se emparejarán.",
+        "pairs": [
+            {
+                "word": "¿CÓMO ESTÁS?",
+                "emoji": "https://i.ibb.co/cxrhFqg/desktop-94a2870f-8869-41c9-9107-b840b840414b.jpg"
+            },
+            {
+                "word": "POR FAVOR",
+                "emoji": "https://i.ibb.co/YZfXTgS/image.png"
+            },
+            {
+                "word": "BUENAS NOCHES",
+                "emoji": "https://i.ibb.co/G5shwdk/desktop-7c51e5b1-59b9-4b0c-9c82-11ad416a2da0.jpg"
+            },
+            {
+                "word": "MI NOMBRE ES",
+                "emoji": "https://i.ibb.co/qrxKQfJ/Dise-o-sin-t-tulo.png"
+            }
+        ],
+        "max_attempts": 3,
+        "feedback": {
+            "correct": "¡Bien hecho! Has emparejado correctamente.",
+            "incorrect": "Inténtalo de nuevo.",
+            "completed": "¡Has encontrado todas las parejas!"
+        }
+    }
+]

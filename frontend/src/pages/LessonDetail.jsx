@@ -1,74 +1,83 @@
 import { useState, useEffect } from "react"
-import { useParams, useNavigate } from "react-router-dom"
+import { useParams, useNavigate, useLocation } from "react-router-dom"
+import { LoadingIndicator, FindThePair, MultipleChoice, SignDetection, BackButton } from "../components"
 import api from "../api"
-import { LoadingIndicator } from "../components"
+import "../styles/LessonDetail.css"
 
 function LessonDetail() {
-    const { id, lessonType } = useParams()
+    const { idModule, id } = useParams()
     const [lesson, setLesson] = useState(null)
-    const [exercises, setExercises] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0)
     const navigate = useNavigate()
 
     useEffect(() => {
-        getLessonData()
-        // getExercisesData()
-    }, [])
-
-    const getLessonData = () => {
         api.get(`/education/api/lessons/${id}/`)
             .then((res) => res.data)
-            .then((data) => setLesson(data))
-            .catch((err) => console.log(err))
+            .then((data) => {
+                setLesson(data)
+                setLoading(false)
+            })
+            .catch((err) => {
+                console.log(err)
+                setLoading(false)
+                navigate("/404")
+            })
+    }, [])
+
+    const updateProgressBackend = () => {
+        api.put(`/education/api/update/${id}/`, {
+            completed: true,
+        })
+        .catch((err) => console.log(err))
+        .finally(() => {
+            navigate("/", { replace: true })
+        })
     }
 
-    // const getExercisesData = () => {
-    //     api.get(`/education/api/lessons/${lessonId}/exercises/${lessonType}/`)
-    //         .then((res) => res.data)
-    //         .then((data) => setExercises(data))
-    //         .catch((err) => console.log(err))
-    // }
+    const handleNextExercise = () => {
+        if (currentExerciseIndex < lesson.content.length - 1) {
+            setCurrentExerciseIndex(currentExerciseIndex + 1) // Avanza al siguiente ejercicio
+        } else {
+            updateProgressBackend()
+        }
+    }
 
-    if (!lesson) {
+    if (loading) {
         return (
-            <div className="module-container">
+            <div className="exercise-container">
                 <LoadingIndicator />
             </div>
         )
     }
 
+    const currentExercise = lesson.content[currentExerciseIndex]
+
     return (
         <>
-            <div className="module-container">
-                <div className="module-header">
-                    <h1>{lesson.title}</h1>
-                    <p>{lesson.description}</p>
-                </div>
-                <div className="module-levels">
-                    {
-                        exercises.length === 0 && <h2>No hay ejercicios disponibles</h2>
-                    }
-                    <div className="module-level">
-                        <span className="module-level-name">¡Encuentra las parejas!</span>
-                        <button className="module-start-button" onClick={(e) => {
-                            e.stopPropagation() 
-                            navigate("/exercise")
-                        }}>Iniciar</button>
+            {lesson.content === null ? (
+                <h2>La lección no tiene contenido</h2>
+            ) : (
+                <div className="exercise-container">
+                    <div className="lesson-header"> {/* Contenedor flex para el BackButton y el título */}
+                        <BackButton /> {/* Botón de regreso */}
+                        <div className="lesson-title-card"> {/* Tarjeta para el título */}
+                        <h2 style={{ margin: 0 }}>{lesson.title}</h2>
+                        </div>
                     </div>
-                    {/* <h2>Ejercicios</h2>
-                    {exercises.length > 0 ? (
-                        exercises.map((exercise, index) => (
-                            <div key={index} className="exercise-item">
-                                <p>{exercise.title || exercise.question || `Ejercicio ${index + 1}`}</p>
-                                <button onClick={() => navigate(`/exercise/${exercise.id}`)}>
-                                    Empezar
-                                </button>
-                            </div>
-                        ))
-                    ) : (
-                        <p>No hay ejercicios para esta lección.</p>
-                    )} */}
+                    <>
+                        {currentExercise.type === "find_the_pair" && (
+                            <FindThePair item={currentExercise} onComplete={handleNextExercise} />
+                        )}
+                        {currentExercise.type === "multiple_choice" && (
+                            <MultipleChoice item={currentExercise} onComplete={handleNextExercise} />
+                        )}
+                        {currentExercise.type === "sign_detection" && (
+                            <SignDetection item={currentExercise} onComplete={handleNextExercise} />
+                        )}
+                    </>
                 </div>
-            </div>
+            )}
         </>
     )
 }

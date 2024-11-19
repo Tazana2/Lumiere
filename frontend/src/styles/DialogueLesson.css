@@ -1,0 +1,158 @@
+/* DialogueLesson.css */
+
+.dialogue-lesson-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.lesson-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    margin-top: 18%;
+}
+
+.dialogue-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Alinea la imagen y el diálogo al inicio */
+}
+
+.dialogue-item img {
+    max-width: 70px;
+    align-self: flex-start;
+    margin-top: 10%; /* Ajusta este margen para controlar la altura de la imagen respecto al cuadro de diálogo */
+    background: #f2f0ff;
+    padding: 2px;
+    border-radius: 20px;
+}
+
+.dialogue-item p {
+    font-size: 1.2rem;
+    padding: 20px;
+    border: 2px solid #f0f0f0;
+    border-radius: 16px;
+    border-bottom-left-radius: 0;
+    align-self: flex-start;
+    margin-left: 5px; /* Superpone el diálogo sobre la imagen */
+    margin-top: 20px; /* Ajusta la posición vertical del diálogo */
+    max-width: 40vh;
+}
+
+.dialogue-item strong {
+    color: #481285;
+    font-weight: 600;
+}
+
+.continue-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #6a38c2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.continue-button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.continue-button:focus {
+    outline: none;
+}
+
+.end-buttons {
+  display: flex;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+/* loader animation */
+#loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2.7em;
+    margin-left: -2.7em;
+    width: 5.4em;
+    height: 5.4em;
+    background-color: #ffffff;
+  }
+
+  #hill {
+    position: absolute;
+    width: 7.1em;
+    height: 7.1em;
+    top: 1.7em;
+    left: 1.7em;
+    background-color: transparent;
+    border-left: .25em solid rgb(82, 12, 85);
+    transform: rotate(45deg);
+  }
+  
+  #hill:after {
+    content: '';
+    position: absolute;
+    width: 7.1em;
+    height: 7.1em;
+    left: 0;
+    background-color: #ffffff;
+  }
+  
+  #box {
+    position: absolute;
+    left: 0;
+    bottom: -.1em;
+    width: 1em;
+    height: 1em;
+    background-color: transparent;
+    border: .25em solid rgb(61, 10, 82);
+    border-radius: 15%;
+    transform: translate(0, -1em) rotate(-45deg);
+    animation: push 2.5s cubic-bezier(.79, 0, .47, .97) infinite;
+  }
+  
+  @keyframes push {
+    0% {
+      transform: translate(0, -1em) rotate(-45deg);
+    }
+    5% {
+      transform: translate(0, -1em) rotate(-50deg);
+    }
+    20% {
+      transform: translate(1em, -2em) rotate(47deg);
+    }
+    25% {
+      transform: translate(1em, -2em) rotate(45deg);
+    }
+    30% {
+      transform: translate(1em, -2em) rotate(40deg);
+    }
+    45% {
+      transform: translate(2em, -3em) rotate(137deg);
+    }
+    50% {
+      transform: translate(2em, -3em) rotate(135deg);
+    }
+    55% {
+      transform: translate(2em, -3em) rotate(130deg);
+    }
+    70% {
+      transform: translate(3em, -4em) rotate(217deg);
+    }
+    75% {
+      transform: translate(3em, -4em) rotate(220deg);
+    }
+    100% {
+      transform: translate(0, -1em) rotate(-225deg);
+    }
+  }

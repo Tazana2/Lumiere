@@ -1,0 +1,169 @@
+    [
+        {
+            "id": 1,
+            "type": "multiple_choice",
+            "title": "Introducción a la Lengua de Señas Colombiano (LSC)",
+            "description": "Lo primero que debes saber es que la Lengua de Señas Colombiana (LSC) es un sistema de comunicación visual y gestual que se utiliza en Colombia para la comunicación de las personas sordas o no hablantes. Cada país tiene su propia lengua de señas, por lo que es importante conocer la de tu país. Para ello hemos creado Lumiere, en esta plataforma, a partir de ejercicios interactivos, podrás aprender la LSC de una manera fácil y entretenida.",
+            "instructions": "",
+            "question": "",
+            "options": [
+                "Sí, continuar"
+            ],
+            "correct_option": "Sí, continuar",
+            "max_attempts": 2,
+            "feedback": {
+                "correct": "¡Correcto! Sigamos",
+                "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+                "completed": "Has completado la pregunta."
+            }
+        },
+        {
+            "id": 2,
+            "type": "multiple_choice",
+            "title": "Introducción a la Lengua de Señas Colombiano (LSC)",
+            "description": "¿Qué debería saber sobre la LSC? &&&&1. La LSC es una lengua natural y completa, con su propia gramática y estructura. &&2. La LSC no es universal, cada país tiene su propia lengua de señas. &&3. La LSC es una lengua visual y gestual, por lo que es importante mantener contacto visual con la persona sorda. &&4. La LSC es una lengua en constante evolución, por lo que es importante estar actualizado en su uso. &&5. En Colombia es oficial la LSC, por lo que es importante su reconocimiento y uso en la sociedad. \n6. Además de Lumiere, existen plataformas creadas por la INSOR, organización que de manera oficial regula la LSC en Colombia.",
+            "instructions": "",
+            "question": "¿Has entendido todo hasta ahora? \n\n🙌",
+            "options": [
+                "¡Lo tengo! 🤟"
+            ],
+            "correct_option": "¡Lo tengo! 🤟",
+            "max_attempts": 2,
+            "feedback": {
+                "correct": "¡Correcto! Sigamos",
+                "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+                "completed": "Has completado la pregunta."
+            }
+        },
+        {
+            "id": 3,
+            "type": "multiple_choice",
+            "title": "INSOR y la LSC",
+            "description": "INSOR es el Instituto Nacional para Sordos, entidad que regula la Lengua de Señas Colombiana (LSC) en Colombia. Esta entidad presta servicios educativos y promueve el uso de la LSC. La seña que representa el INSOR es: ",
+            "instructions": "",
+            "image": "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png",
+            "question": "",
+            "options": [
+                "Entendido"
+            ],
+            "correct_option": "Entendido",
+            "max_attempts": 2,
+            "feedback": {
+                "correct": "¡Correcto! Sigamos",
+                "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+                "completed": "Has completado la pregunta."
+            }
+        },
+        {
+            "id": 4,
+            "type": "multiple_choice",
+            "title": "Selecciona la respuesta correcta",
+            "description": "Esta es tu primera pregunta de prueba. Solo tienes que seleccionar la respuesta correcta, tienes tantos intentos como quieras ¡Buena suerte!",
+            "instructions": "",
+            "option_type" : "images",
+            "question": "¿Cuál es la seña del INSOR en LSC?",
+            "options": [
+                "https://i.ibb.co/LYz7f4S/Screenshot-from-2024-10-31-20-36-04.png",
+                "https://i.ibb.co/1b6KQ6H/Screenshot-from-2024-10-31-20-37-09.png",
+                "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png",
+                "https://i.ibb.co/qj7ZTTh/Screenshot-from-2024-10-31-20-38-57.png"
+            ],
+            "correct_option": "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png",
+            "max_attempts": 2,
+            "feedback": {
+                "correct": "¡Correcto! Sigamos",
+                "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+                "completed": "Has completado la pregunta."
+            }
+        },
+        {
+            "id": 5,
+            "type": "multiple_choice",
+            "title": "INSOR y la LSC",
+            "description": "INSOR es el Instituto Nacional para Sordos, entidad que regula la Lengua de Señas Colombiana (LSC) en Colombia. Esta entidad presta servicios educativos y promueve el uso de la LSC. La seña que representa el INSOR es: ",
+            "instructions": "",
+            "image": "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png",
+            "question": "",
+            "options": [
+                "Entendido"
+            ],
+            "correct_option": "Entendido",
+            "max_attempts": 2,
+            "feedback": {
+                "correct": "¡Correcto! Sigamos",
+                "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+                "completed": "Has completado la pregunta."
+            }
+        },
+        {
+            "id": 6,
+            "type": "multiple_choice",
+            "title": "Selecciona la seña correcta",
+            "description": "Mira la siguiente seña y selecciona a lo que corresponde",
+            "instructions": "",
+            "video": "/hola.mp4",
+            "question": "",
+            "options": [
+                "Hola",
+                "Enojado",
+                "Adiós",
+                "Gracias"
+            ],
+            "correct_option": "Hola",
+            "max_attempts": 2,
+            "feedback": {
+                "correct": "¡Correcto! Sigamos",
+                "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+                "completed": "Has completado la pregunta."
+            }
+        },
+        {
+            "id": 7,
+            "type": "multiple_choice",
+            "title": "Introducción al sistema de reconocimiento de señas",
+            "description": "En algunos ejercicios te encontrarás con el sistema de reconocimiento de señas, en el cual deberás realizar una seña frente a la cámara para que el sistema la detecte. Este sistema te permitirá practicar la LSC de una manera más interactiva y dinámica. A continuación te mostramos como funciona: && 1. Se te mostrará una seña que deberás realizar frente a la cámara. &&2. El sistema detectará la seña y te indicará si es correcta, deberas acomodarte manera que se vea tu torso: ",
+            "instructions": "",
+            "image": "https://i.ibb.co/ThN59qq/Screenshot-from-2024-10-31-17-22-43.png",
+            "question": "3. ¡Diviértete aprendiendo!",
+            "options": [
+                "¡Entendido!, continuar"
+            ],
+            "correct_option": "¡Entendido!, continuar",
+            "max_attempts": 2,
+            "feedback": {
+                "correct": "¡Correcto! Sigamos"
+            }
+        },
+        {
+            "id": 8,
+            "type": "sign_detection",
+            "title": "Realiza la seña correcta",
+            "description": "Haz la seña para decir 'Hola'", 
+            "instructions": "Realiza la seña para 'Hola' frente a la cámara. El sistema te indicará si es correcta.",
+            "sign_to_detect": 0,
+            "correct": "¡Bien hecho! Has realizado la seña de 'Hola' correctamente."
+        },
+        {
+            "id": 9,
+            "type": "find_the_pair",
+            "title": "Encuentra las parejas",
+            "description": "Empareja las emociones con los emojis correctos.",
+            "instructions": "Selecciona una palabra y luego el emoji que la representa. Si son correctos, se emparejarán.",
+            "pairs": [
+                {
+                    "word": "INSOR",
+                    "emoji": "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png"
+                },
+                {
+                    "word": "HOLA",
+                    "emoji": "https://i.ibb.co/bdGh2gK/Screenshot-from-2024-11-01-16-24-54.png"
+                }
+            ],
+            "max_attempts": 3,
+            "feedback": {
+                "correct": "¡Bien hecho! Has emparejado correctamente.",
+                "incorrect": "Inténtalo de nuevo.",
+                "completed": "¡Has encontrado todas las parejas!"
+            }
+        }
+    ]

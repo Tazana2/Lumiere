@@ -4,16 +4,16 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 8rem;
+    padding-top: 160px;
     font-family: Arial, sans-serif;
+    padding-bottom: 15px;
   }
   
   .profile-card {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 800px; 
+    max-width: 90%; 
   }
   
   .profile-header {
@@ -70,6 +70,13 @@
     line-height: 1.8;
     color: #34495e;
   }
+
+  .share-buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
   
   @media (min-width: 640px) {
     .profile-header {

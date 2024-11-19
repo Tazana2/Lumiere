@@ -1,0 +1,139 @@
+{
+  "lessonId": "lesson_001",
+  "title": "Conversación en una cafetería",
+  "description": "Simulación de una conversación entre tres personas en una cafetería para practicar saludos y presentaciones.",
+  "participants": [
+    { "id": "1", "name": "Ana" },
+    { "id": "2", "name": "Luis" },
+    { "id": "3", "name": "Marta" }
+  ],
+  "content": [
+    {
+      "type": "dialogue",
+      "id": "dialogue_1",
+      "speakerId": "1",
+      "text": "_____, ¿cómo estás?"
+    },
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "title": "Selecciona la respuesta correcta",
+      "description": "",
+      "instructions": "",
+      "option_type" : "images",
+      "question": "¿Qué seña debería utilizar Ana para saludar a Luis?\n\n🙌",
+      "options": [
+          "/signs/amor.png",
+          "/signs/hola.png",
+          "/signs/adios.png",
+          "/signs/por_favor.png"
+      ],
+      "correct_option": "/signs/hola.png",
+      "feedback": {
+          "correct": "¡Correcto! Sigamos",
+          "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+          "completed": "Has completado la pregunta."
+      }
+    },
+    {
+      "type": "dialogue",
+      "id": "dialogue_2",
+      "speakerId": "2",
+      "text": "Hola, Ana. Muy bien, gracias. ¿Y tú?"
+    },
+    {
+      "type": "dialogue",
+      "id": "dialogue_3",
+      "speakerId": "3",
+      "text": "Hola a ambos. ¿Puedo unirme?"
+    },
+    {
+      "type": "dialogue",
+      "id": "dialogue_4",
+      "speakerId": "1",
+      "text": "Claro, adelante. Estoy practicando una nueva señal. ¿Quieres intentarlo conmigo?"
+    },
+    {
+      "id": 2,
+      "type": "sign_detection",
+      "title": "Realiza la seña correcta",
+      "description": "Inténtalo! Realiza la seña cómo estás: como_estas.jpg ", 
+      "instructions": "",
+      "sign_to_detect": 2,
+      "correct": "¡Bien hecho! Has realizado la seña de 'como_estas' correctamente."
+    },
+    {
+      "type": "dialogue",
+      "id": "dialogue_5",
+      "speakerId": "1",
+      "text": "Muy bien!"
+    },
+    {
+      "id": 3,
+      "type": "find_the_pair",
+      "title": "Encuentra las parejas",
+      "description": "Empareja las emociones con los emojis correctos.",
+      "instructions": "Selecciona una palabra y luego el emoji que la representa. Si son correctos, se emparejarán.",
+      "pairs": [
+          {
+              "word": "INSOR",
+              "emoji": "/signs/insor.png"
+          },
+          {
+              "word": "HOLA",
+              "emoji": "/signs/hola.png"
+          }
+      ],
+      "max_attempts": 3,
+      "feedback": {
+          "correct": "¡Bien hecho! Has emparejado correctamente.",
+          "incorrect": "Inténtalo de nuevo.",
+          "completed": "¡Has encontrado todas las parejas!"
+      }
+  },
+  {
+    "id": 4,
+    "type": "multiple_choice",
+    "title": "Selecciona la respuesta correcta",
+    "description": "",
+    "instructions": "",
+    "option_type" : "images",
+    "question": "¿Qué seña es esta?\n\n🙌",
+    "image": "/signs/hola.png",
+    "options": [
+        "hola",
+        "adios",
+        "idea",
+        "felicitar"
+    ],
+    "correct_option": "hola",
+    "feedback": {
+        "correct": "¡Correcto! Sigamos",
+        "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+        "completed": "Has completado la pregunta."
+    }
+  },
+  {
+    "id": 5,
+    "type": "multiple_choice",
+    "title": "Selecciona la seña correcta",
+    "description": "Mira la siguiente seña y selecciona a lo que corresponde",
+    "instructions": "",
+    "video": "/hola.mp4",
+    "question": "",
+    "options": [
+        "Hola",
+        "Enojado",
+        "Adiós",
+        "Gracias"
+    ],
+    "correct_option": "Hola",
+    "max_attempts": 2,
+    "feedback": {
+        "correct": "¡Correcto! Sigamos",
+        "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+        "completed": "Has completado la pregunta."
+    }
+}
+  ]
+}

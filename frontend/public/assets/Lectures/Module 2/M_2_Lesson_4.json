@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "type": "multiple_choice",
+        "title": "Pregunta 1",
+        "description":"Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type" : "images",
+        "question": "¿Cuál es la seña del INSOR en LSC?",
+        "options": [
+            "https://i.ibb.co/JtHRQjf/image.png",
+            "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png",
+            "https://i.ibb.co/LYz7f4S/Screenshot-from-2024-10-31-20-36-04.png",
+            "https://i.ibb.co/YZfXTgS/image.png"
+        ],
+        "correct_option": "https://i.ibb.co/Fqtffmj/Screenshot-from-2024-10-31-16-54-42.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 2,
+        "type": "multiple_choice",
+        "title": "Pregunta 2",
+        "description": "¿Cuál es la seña que se muestra en la imágen?",
+        "instructions": "",
+        "image": "https://i.ibb.co/YZfXTgS/image.png",
+        "question": "",
+        "options": [
+            "Gracias",
+            "Hola",
+            "Mal",
+            "Por favor"
+        ],
+        "correct_option": "Por favor",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 3,
+        "type": "sign_detection",
+        "title": "Pregunta 3",
+        "description": "Haz la seña para decir 'Por favor'.", 
+        "instructions": "Realiza la seña para 'Por favor' frente a la cámara. El sistema te indicará si es correcta.",
+        "sign_to_detect": 6,
+        "correct": "¡Bien hecho! Has realizado la seña de 'Por favor' correctamente."
+    },
+    {
+        "id": 4,
+        "type": "multiple_choice",
+        "title": "Pregunta 4",
+        "description":"Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type": "images",
+        "question": "¿Cuál es la seña de Bien en LSC?",
+        "options": [
+            "https://i.ibb.co/YZfXTgS/image.png",
+            "https://i.ibb.co/JtHRQjf/image.png",
+            "https://i.ibb.co/p3rVXfn/image.png",
+            "https://i.ibb.co/FmhmBS6/image.png"
+        ],
+        "correct_option": "https://i.ibb.co/p3rVXfn/image.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 5,
+        "type": "multiple_choice",
+        "title": "Pregunta 5",
+        "description":"Selecciona la respuesta correcta",
+        "instructions": "",
+        "option_type": "images",
+        "question": "¿Cuál es la seña de Mal en LSC?",
+        "options": [
+            "https://i.ibb.co/s37mVJS/image.png",
+            "https://i.ibb.co/FmhmBS6/image.png",
+            "https://i.ibb.co/JtHRQjf/image.png",
+            "https://i.ibb.co/YZfXTgS/image.png"
+        ],
+        "correct_option": "https://i.ibb.co/FmhmBS6/image.png",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    },
+    {
+        "id": 6,
+        "type": "multiple_choice",
+        "title": "Pregunta 6",
+        "description": "Observa el video a continuación. ¿Qué significa la seña que ves?",
+        "instructions": "",
+        "video": "/mi_nombre_es.mp4",
+        "question": "",
+        "options": [
+            "Buenas tardes",
+            "Por favor",
+            "Mi nombre es",
+            "Mal"
+        ],
+        "correct_option": "Mi nombre es",
+        "max_attempts": 2,
+        "feedback": {
+            "correct": "¡Correcto! Sigamos",
+            "incorrect": "Respuesta incorrecta. Intenta de nuevo.",
+            "completed": "Has completado la pregunta."
+        }
+    }
+]

@@ -1,0 +1,9 @@
+django
+notebook
+flatbuffers==1.12.0
+tensorflow==2.4.1
+tensorflow-gpu==2.4.1
+matplotlib==3.6.0
+scikit-learn
+mediapipe
+numpy==1.19.5
